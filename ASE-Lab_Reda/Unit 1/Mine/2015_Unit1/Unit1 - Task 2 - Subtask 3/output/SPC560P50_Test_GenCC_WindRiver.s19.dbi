@@ -1,0 +1,4 @@
+[Application]
+LoaderTool=PPC
+ApplicationPath=C:\PPC Projects\WindRiver_Project\output\SPC560P50_Test_GenCC_WindRiver.s19
+Format=s19

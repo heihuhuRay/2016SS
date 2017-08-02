@@ -1,0 +1,238 @@
+Wind River DLD V5.7.0.0		Fri Apr 24 10:21:28 2015
+
+Command line:
+dld -tPPC5534VEN:simple .\src\default560P.dld -m6 -lc -limpl
+C:\Users\kucha\Downloads\group four default files\output\bam_init.o
+C:\Users\kucha\Downloads\group four default files\output\crt0.o
+C:\Users\kucha\Downloads\group four default files\output\ecc_init.o
+C:\Users\kucha\Downloads\group four default files\output\main.o
+C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+C:\Users\kucha\Downloads\group four default files\output\api.o -o
+C:\Users\kucha\Downloads\group four default files\output\unit1.elf
+
+Output file name   : C:\Users\kucha\Downloads\group four default files\output\unit1.elf
+Output file format : ELF
+Target machine type: PPC
+
+		Link Editor Memory Map
+
+
+output		input		virtual
+section		section		address		size	 file
+
+.abs.00000040   		00000040	000000dc
+		.abs.00000040   00000040	000000dc C:\Users\kucha\Downloads\group four default files\output\api.o
+			Ext_Isr 00000040	000000dc
+
+
+.rcw            		00000000	00000008
+		.rcw            00000000	00000008 C:\Users\kucha\Downloads\group four default files\output\bam_init.o
+		ResetConfigWord 00000000	00000004
+			 _reset 00000004	00000004
+
+
+.init           		00000020	00000000
+
+.init_vle       		00000020	00000000
+
+.exec_vect      		00001000	00000000
+
+.exec_vect_Vle  		00001000	00000000
+
+.text           		00002000	00000000
+
+.text_vle       		00002000	000004be
+		.text_vle       00002000	00000000 C:\Users\kucha\Downloads\group four default files\output\bam_init.o
+
+		.text_vle       00002000	00000058 C:\Users\kucha\Downloads\group four default files\output\crt0.o
+			 _start 00002004	00000000
+			   loop 00002014	00000000
+
+		.text_vle       00002058	00000030 C:\Users\kucha\Downloads\group four default files\output\ecc_init.o
+			   loop 00002068	00000000
+
+		.text_vle       00002088	0000002a C:\Users\kucha\Downloads\group four default files\output\main.o
+		   configure_io 00002088	00000002
+			   main 0000208c	00000016
+		       showdata 000020a4	00000002
+		    conf_timer1 000020a8	00000002
+		    timer0_intr 000020ac	00000002
+		    timer1_intr 000020b0	00000002
+
+		.text_vle       000020b4	000000b2 C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+			romcopy 000020b4	000000b2
+
+		.text_vle       00002168	00000356 C:\Users\kucha\Downloads\group four default files\output\api.o
+		      init_mode 00002168	000000f6
+		     init_timer 00002260	00000012
+		    conf_timer0 00002274	0000003c
+	       init_peripherals 000022b0	000000ca
+			   init 0000237c	00000142
+
+
+.rodata         		000024be	00000000
+
+.ctors          		000024c0	00000000
+
+.dtors          		000024c0	00000000
+
+.sdata2         		000024c0	00000000
+
+.sbss2          		000024c0	00000000
+
+.vects          		00012000	00000000
+
+.data           		000024c0	00000000
+
+.sdata          		000024c0	00000000
+
+.sbss           		40000000	00000004
+		.sbss           40000000	00000004 C:\Users\kucha\Downloads\group four default files\output\api.o
+			counter 40000000	00000004
+
+
+.bss            		40000004	00000000
+
+.tibss          		40000004	00000000
+
+.tidata         		40000004	00000000
+
+.PPC.EMB.apuinfo		00000000	00000018
+		.PPC.EMB.apuinfo 00000000	00000018 C:\WINDRI~1\diab\570~1.0\PPCVLEE\simple\libc.a
+
+
+.debug_frame    		00000000	00000164
+		.debug_frame    00000000	00000014 C:\Users\kucha\Downloads\group four default files\output\bam_init.o
+		    __local_cie 00000000	00000000
+
+		.debug_frame    00000014	0000007c C:\Users\kucha\Downloads\group four default files\output\main.o
+		    __local_cie 00000014	00000000
+
+		.debug_frame    00000090	00000030 C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+		    __local_cie 00000090	00000000
+
+		.debug_frame    000000c0	000000a4 C:\Users\kucha\Downloads\group four default files\output\api.o
+		    __local_cie 000000c0	00000000
+
+
+.debug_line     		00000000	000004a7
+		.debug_line     00000000	00000074 C:\Users\kucha\Downloads\group four default files\output\bam_init.o
+
+		.debug_line     00000074	0000008e C:\Users\kucha\Downloads\group four default files\output\crt0.o
+
+		.debug_line     00000102	00000082 C:\Users\kucha\Downloads\group four default files\output\ecc_init.o
+
+		.debug_line     00000184	000000c7 C:\Users\kucha\Downloads\group four default files\output\main.o
+
+		.debug_line     0000024b	000000aa C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+
+		.debug_line     000002f5	0000011a C:\Users\kucha\Downloads\group four default files\output\api.o
+
+		.debug_line     0000040f	00000098 C:\Users\kucha\Downloads\group four default files\output\api.o
+
+
+.debug_abbrev   		00000000	00000154
+		.debug_abbrev   00000000	00000039 C:\Users\kucha\Downloads\group four default files\output\bam_init.o
+
+		.debug_abbrev   00000039	00000045 C:\Users\kucha\Downloads\group four default files\output\main.o
+
+		.debug_abbrev   0000007e	0000006d C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+
+		.debug_abbrev   000000eb	00000069 C:\Users\kucha\Downloads\group four default files\output\api.o
+
+
+.debug_info     		00000000	00000723
+		.debug_info     00000000	0000010a C:\Users\kucha\Downloads\group four default files\output\bam_init.o
+
+		.debug_info     0000010a	0000018b C:\Users\kucha\Downloads\group four default files\output\main.o
+
+		.debug_info     00000295	00000227 C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+
+		.debug_info     000004bc	00000197 C:\Users\kucha\Downloads\group four default files\output\api.o
+
+		.debug_info     00000653	000000d0 C:\Users\kucha\Downloads\group four default files\output\api.o
+
+
+Link editor command file symbols
+                         __argv 00002000
+                          __env 00002000
+                     __DATA_ROM 000024c0
+                     __DATA_RAM 40000000
+                     __DATA_END 40000000
+                    __BSS_START 40000000
+                      __BSS_END 40000004
+                   __HEAP_START 40000004
+                      __SP_INIT 4000a000
+                       __SP_END 40009800
+                     __HEAP_END 40009800
+                  ___HEAP_START 40000004
+                    ___HEAP_END 40009800
+                     ___SP_INIT 4000a000
+                      ___SP_END 40009800
+                    ___DATA_ROM 000024c0
+                    ___DATA_RAM 40000000
+                    ___DATA_END 40000000
+                   ___BSS_START 40000000
+                     ___BSS_END 40000004
+                     _SDA_BASE_ 40007ff0
+                    _SDA2_BASE_ 0000a4b0
+
+                                Cross Reference Table
+
+Symbol                          Output          Input           Referenced
+                                Section         Section         (* - Defined)
+
+Ext_Isr                         .abs.00000040	.abs.00000040	* C:\Users\kucha\Downloads\group four default files\output\api.o
+ResetConfigWord                 .rcw    	.rcw    	* C:\Users\kucha\Downloads\group four default files\output\bam_init.o
+_SDA2_BASE_                     [absolute]	        	  C:\Users\kucha\Downloads\group four default files\output\crt0.o
+                                                                * C:\WINDRI~1\diab\570~1.0\PPCVLEE\simple\libc.a
+_SDA_BASE_                      [absolute]	        	  C:\Users\kucha\Downloads\group four default files\output\crt0.o
+                                                                * C:\WINDRI~1\diab\570~1.0\PPCVLEE\simple\libc.a
+__BSS_END                       [absolute]	        	  C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+                                                                * .\src\default560P.dld
+__BSS_START                     [absolute]	        	  C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+                                                                * .\src\default560P.dld
+__DATA_END                      [absolute]	        	  C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+                                                                * .\src\default560P.dld
+__DATA_RAM                      [absolute]	        	  C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+                                                                * .\src\default560P.dld
+__DATA_ROM                      [absolute]	        	  C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+                                                                * .\src\default560P.dld
+__HEAP_END                      [absolute]	        	* .\src\default560P.dld
+__HEAP_START                    [absolute]	        	* .\src\default560P.dld
+__SP_END                        [absolute]	        	* .\src\default560P.dld
+__SP_INIT                       [absolute]	        	  C:\Users\kucha\Downloads\group four default files\output\crt0.o
+                                                                * .\src\default560P.dld
+___BSS_END                      [absolute]	        	* .\src\default560P.dld
+___BSS_START                    [absolute]	        	* .\src\default560P.dld
+___DATA_END                     [absolute]	        	* .\src\default560P.dld
+___DATA_RAM                     [absolute]	        	* .\src\default560P.dld
+___DATA_ROM                     [absolute]	        	* .\src\default560P.dld
+___HEAP_END                     [absolute]	        	* .\src\default560P.dld
+___HEAP_START                   [absolute]	        	* .\src\default560P.dld
+___SP_END                       [absolute]	        	* .\src\default560P.dld
+___SP_INIT                      [absolute]	        	* .\src\default560P.dld
+__argv                          [absolute]	        	* .\src\default560P.dld
+__env                           [absolute]	        	* .\src\default560P.dld
+_reset                          .rcw    	.rcw    	* C:\Users\kucha\Downloads\group four default files\output\bam_init.o
+_start                          .text_vle	.text_vle	* C:\Users\kucha\Downloads\group four default files\output\crt0.o
+                                                                  C:\Users\kucha\Downloads\group four default files\output\bam_init.o
+conf_timer0                     .text_vle	.text_vle	* C:\Users\kucha\Downloads\group four default files\output\api.o
+conf_timer1                     .text_vle	.text_vle	* C:\Users\kucha\Downloads\group four default files\output\main.o
+configure_io                    .text_vle	.text_vle	  C:\Users\kucha\Downloads\group four default files\output\api.o
+                                                                * C:\Users\kucha\Downloads\group four default files\output\main.o
+counter                         .sbss   	.sbss   	* C:\Users\kucha\Downloads\group four default files\output\api.o
+init                            .text_vle	.text_vle	* C:\Users\kucha\Downloads\group four default files\output\api.o
+                                                                  C:\Users\kucha\Downloads\group four default files\output\main.o
+init_mode                       .text_vle	.text_vle	* C:\Users\kucha\Downloads\group four default files\output\api.o
+init_peripherals                .text_vle	.text_vle	* C:\Users\kucha\Downloads\group four default files\output\api.o
+init_timer                      .text_vle	.text_vle	* C:\Users\kucha\Downloads\group four default files\output\api.o
+main                            .text_vle	.text_vle	  C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+                                                                * C:\Users\kucha\Downloads\group four default files\output\main.o
+romcopy                         .text_vle	.text_vle	* C:\Users\kucha\Downloads\group four default files\output\romcopy.o
+                                                                  C:\Users\kucha\Downloads\group four default files\output\crt0.o
+showdata                        .text_vle	.text_vle	* C:\Users\kucha\Downloads\group four default files\output\main.o
+timer0_intr                     .text_vle	.text_vle	  C:\Users\kucha\Downloads\group four default files\output\api.o
+                                                                * C:\Users\kucha\Downloads\group four default files\output\main.o
+timer1_intr                     .text_vle	.text_vle	  C:\Users\kucha\Downloads\group four default files\output\api.o
+                                                                * C:\Users\kucha\Downloads\group four default files\output\main.o

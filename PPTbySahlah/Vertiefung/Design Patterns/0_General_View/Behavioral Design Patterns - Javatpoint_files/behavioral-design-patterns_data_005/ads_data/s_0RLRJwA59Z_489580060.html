@@ -1,0 +1,87 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><script language="JavaScript" src="s_0RLRJwA59Z_489580060_data/adscript_002.php"></script><script type="text/javascript" language="JavaScript">
+ <!--
+if((typeof(asm_novischk)=="boolean" && asm_novischk !== true) || typeof(asm_novischk)!="boolean"){document.write('<div id="asmvcd1646x3519" class="asmbeacon asmvcd"></div>');} var asm_novischk = false; 
+ function asm_cv(e, w, h)
+ {
+  if(w*h<=0){return -1;}
+  var obj = document.getElementById(e);
+  if(!obj){return -1;}
+  var win = window;
+  var dl = 0;
+  var winwh = asm_ds(win);
+  var c = asm_coords(obj, w, h, winwh[0], winwh[1]);
+  while(win.parent && dl<20)
+  {
+   dl++;
+   try
+   {
+    var owin = win; win = win.parent;
+    var winwh2 = asm_ds(win);
+    obj = asm_fndwin(win,owin); if(obj == null){break;}
+    var c2 = asm_coords(obj, winwh[0], winwh[1], winwh2[0], winwh2[1]);
+    c[0]+=c2[0]; c[1]+=c2[1]; c[2]+=winwh2[0]; c[3]+=winwh2[1];
+    if(c[2]>c2[2]){c[2]=c2[2];} if(c[3]>c2[3]){c[3]=c2[3];}
+    winwh = winwh2;
+   }
+   catch(e){break;}
+  }
+  var nw = c[2]-c[0]; var nh = c[3]-c[1];
+  if(nw<0){nw=0;} if(nh<0){nh=0;}
+  var u = Math.round(((nw*nh)/(w*h))*100);
+  if (u >= 0 && u < 25) { return 0 }
+  else if (u >= 25 && u < 50) { return 1 }
+  else if (u >= 50 && u < 75) { return 2 }
+  else if (u >= 75 && u < 100) { return 3 }
+  else if (u >= 100) { return 4 }
+  else { return -1 }
+ }
+
+ function asm_fndwin(w,o)
+ {
+  try
+  {
+   var ifs = w.document.getElementsByTagName("iframe");
+   for(var i=0; i<ifs.length; i++){try{ if(ifs[i].contentWindow == o){return ifs[i];}} catch(e) {}}
+  }
+  catch(e){}
+  return null;
+ }
+
+ function asm_coords(obj, w, h, winw, winh)
+ {
+  var o = 0, l = 0, t = 0, b = 0, r = 0;
+  while (obj.offsetParent !== null)
+  {
+   o++; if (o > 100) { break; }
+   l += obj.offsetLeft;  t += obj.offsetTop;
+   obj = obj.offsetParent
+  }
+  if(l+w<0){l=0; w=0;} if(t+h<0){t=0; h=0;}
+  b = t+h; r = l+w;
+  if(b>winh){b = winh;} if(r>winw){r = winw;}
+  return [l,t,r,b];
+ }
+
+function asm_ds(e)
+{
+ var t = 0, n = 0;
+ if (e.innerHeight && typeof e.innerHeight == "number"){ t = e.innerWidth }
+ else if (e.document.documentElement && document.documentElement.clientWidth && typeof e.document.documentElement.clientWidth == "number") { t = e.document.documentElement.clientWidth }
+ else if (e.document.body && e.document.body.clientWidth && typeof e.document.body.clientWidth == "number") { t = e.document.body.clientWidth }
+ if (e.innerHeight && typeof e.innerHeight == "number") { n = e.innerHeight}
+ else if (e.document.documentElement && e.document.documentElement.clientWidth && typeof e.document.documentElement.clientWidth == "number") { n = e.document.documentElement.clientHeight}
+ else if (e.document.body && e.document.body.clientWidth && typeof e.document.body.clientWidth == "number") { n = e.document.body.clientHeight }
+ return [t, n]
+}
+
+ var asmvcv1646x3519 = asm_cv("asmvcd1646x3519",120,600); if(document.getElementById("asmvcd1646x3519")){document.getElementById("asmvcd1646x3519").style.position = "absolute"; document.getElementById("asmvcd1646x3519").style.left = "0px"; document.getElementById("asmvcd1646x3519").style.top = "0px";}document.write('<scr'+'ipt src="https://beyondmedia.adspirit.de/adscript.php?&vis='+encodeURIComponent(asmvcv1646x3519)+'&pid=1646&wmid=2312&utm_source=dataxu&utm_medium=display_other&utm_content=120x600_familie&utm_campaign=rc_fruehbucher_15-16&ord=6652412973958624&rdclick=https%3A%2F%2Fi.w55c.net%2Fcl%3Ft%3D1%26btid%3DNTY3QzQyQkIwMDA4MDk2RDBBMTYyNjhCMTEwREYxQjd8R0ZrVVY0VzIxb3wxNDUwOTg0MTIzNTkyfDF8MEZGSE1XdnlZZ3wwUkxSSndBNTlafG1hTnpkZENwMUFiTEV3NXwxNTk1MDd8fHx8LjBQfFVTRA%26ei%3DGOOGLE_CONTENTNETWORK%26tpc%3Dhttps://adclick.g.doubleclick.net/aclk%253Fsa%253DL%2526ai%253DClC7Su0J8Vu2SIIvNWLfjt4gBk--c3wTbxI2flQHAjbcBEAEgAGCVgrOCwAeCARdjYS1wdWItNDY5OTg1ODU0OTAyMzM4MsgBCagDAaoEmgFP0NJB2kJouROFPkgmw5IUjqbnZlBc_DDqzDGY4IkHYcrg8MOSQr2hOLMuqNn2ljA_nRoTgncTvxWvBl9_EiiP9OETSC-yrf4HOUvTHMgWGuLDoxMHza6YN-L0Noz8tboS1UG-KRe8I144e9_0WTM9LSKoB8oGBhFvJ8KMYgztUHz45bzFKgqZcoqjNsKxyT9tDk-OgYGg7gA5gAapzNST1aXYrrMBoAYh2AcA%2526num%253D1%2526sig%253DAOD64_0sTfzcdFDrxrUXF-DeAuHVIw4auw%2526client%253Dca-pub-4699858549023382%2526adurl%253D%26rurl%3D" type="text/javasc'+'ript" language="JavaS'+'cript"></sc'+'ript>');    
+//-->
+</script></head><body><div style="position: absolute; left: 0px; top: 0px;" id="asmvcd1646x3519" class="asmbeacon asmvcd"></div><script src="s_0RLRJwA59Z_489580060_data/adscript.php" type="text/javascript" language="JavaScript"></script><div class="asmbeacon asmb2" style="position:absolute; left:0px; top:0px;"><img src="s_0RLRJwA59Z_489580060_data/adview.gif" style="width:1px; height:1px; border:0px white solid !important;" border="0" height="1" width="1"></div><a target="_blank" href="https://i.w55c.net/cl?t=1&amp;btid=NTY3QzQyQkIwMDA4MDk2RDBBMTYyNjhCMTEwREYxQjd8R0ZrVVY0VzIxb3wxNDUwOTg0MTIzNTkyfDF8MEZGSE1XdnlZZ3wwUkxSSndBNTlafG1hTnpkZENwMUFiTEV3NXwxNTk1MDd8fHx8LjBQfFVTRA&amp;ei=GOOGLE_CONTENTNETWORK&amp;tpc=https://adclick.g.doubleclick.net/aclk%3Fsa%3DL%26ai%3DClC7Su0J8Vu2SIIvNWLfjt4gBk--c3wTbxI2flQHAjbcBEAEgAGCVgrOCwAeCARdjYS1wdWItNDY5OTg1ODU0OTAyMzM4MsgBCagDAaoEmgFP0NJB2kJouROFPkgmw5IUjqbnZlBc_DDqzDGY4IkHYcrg8MOSQr2hOLMuqNn2ljA_nRoTgncTvxWvBl9_EiiP9OETSC-yrf4HOUvTHMgWGuLDoxMHza6YN-L0Noz8tboS1UG-KRe8I144e9_0WTM9LSKoB8oGBhFvJ8KMYgztUHz45bzFKgqZcoqjNsKxyT9tDk-OgYGg7gA5gAapzNST1aXYrrMBoAYh2AcA%26num%3D1%26sig%3DAOD64_0sTfzcdFDrxrUXF-DeAuHVIw4auw%26client%3Dca-pub-4699858549023382%26adurl%3D&amp;rurl=https%3A%2F%2Fbeyondmedia.adspirit.de%2Fadclick.php%3Ftz%3D1450984124637029%26pid%3D1646%26kid%3D176%26wmid%3D2312%26wsid%3D-1%26uid%3D-1%26ord%3D6652412973958624%26target1%3Dhttp%253A%252F%252Fwww.robinson.com%252Fde%252Fde%252Ffamilien-fruehbucherurlaub" headlinepush1="So%20sehr%20wir&amp;sublinePush1=sind%20wir%20nur%20hier.&amp;addonprice=Bis%20zu&amp;price=444&amp;priceSub=pro%20Person%20sparen&amp;priceadvise=Aktions-%0DAngebot!"><img style="border:0px white solid !important; width:120px; height:600px;" alt="Hier klicken!" src="s_0RLRJwA59Z_489580060_data/0_ROB-2015-12-familie600-120x600.jpg" border="0" height="600" width="120"></a>
+<script type="text/javascript" language="JavaScript"><!-- 
+ //--></script><noscript>
+<a href="https://i.w55c.net/cl?t=1&btid=NTY3QzQyQkIwMDA4MDk2RDBBMTYyNjhCMTEwREYxQjd8R0ZrVVY0VzIxb3wxNDUwOTg0MTIzNTkyfDF8MEZGSE1XdnlZZ3wwUkxSSndBNTlafG1hTnpkZENwMUFiTEV3NXwxNTk1MDd8fHx8LjBQfFVTRA&ei=GOOGLE_CONTENTNETWORK&tpc=http://adclick.g.doubleclick.net/aclk%3Fsa%3DL%26ai%3DClC7Su0J8Vu2SIIvNWLfjt4gBk--c3wTbxI2flQHAjbcBEAEgAGCVgrOCwAeCARdjYS1wdWItNDY5OTg1ODU0OTAyMzM4MsgBCagDAaoEmgFP0NJB2kJouROFPkgmw5IUjqbnZlBc_DDqzDGY4IkHYcrg8MOSQr2hOLMuqNn2ljA_nRoTgncTvxWvBl9_EiiP9OETSC-yrf4HOUvTHMgWGuLDoxMHza6YN-L0Noz8tboS1UG-KRe8I144e9_0WTM9LSKoB8oGBhFvJ8KMYgztUHz45bzFKgqZcoqjNsKxyT9tDk-OgYGg7gA5gAapzNST1aXYrrMBoAYh2AcA%26num%3D1%26sig%3DAOD64_0sTfzcdFDrxrUXF-DeAuHVIw4auw%26client%3Dca-pub-4699858549023382%26adurl%3D&rurl=https://beyondmedia.adspirit.de/adclick.php?pid=1646&wmid=2312&utm_source=dataxu&utm_medium=display_other&utm_content=120x600_familie&utm_campaign=rc_fruehbucher_15-16&ord=6652412973958624" target="_blank">
+<img src="https://beyondmedia.adspirit.de/adview.php?pid=1646&wmid=2312&utm_source=dataxu&utm_medium=display_other&utm_content=120x600_familie&utm_campaign=rc_fruehbucher_15-16&ord=6652412973958624" alt="Hier klicken!" border="0" width="120" height="600" />
+</a>
+</noscript><br>
+<script type="text/javascript" src="s_0RLRJwA59Z_489580060_data/creative_add_on.js"></script></body></html>

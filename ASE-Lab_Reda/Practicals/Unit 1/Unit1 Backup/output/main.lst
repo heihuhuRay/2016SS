@@ -1,0 +1,469 @@
+                                  1 	#$$m2		- PowerPC mnemonics
+                                  2 	#$$pVLE		- PowerPC VLE encoding
+                                  3 	#$$oPPC5534  - Optimized for PPC5534
+                                  4 	#$$ko 9		- Reorder info
+                                  5 		.file		"main.c"
+                                  6 	#$$eb
+                                  7 	#$$sz 0
+                                  8 	#$$fp 0
+                                  9 		.section	.PPC.EMB.apuinfo,,@note
+  00000000 01  0000 0008         10 		.4byte		8
+  00000004 01  0000 0004         11 		.4byte		4
+  00000008 01  0000 0002         12 		.4byte		2
+  0000000c 01  4150 5569 6e66    13 		.byte		"APUinfo"
+  00000012 01  6f                   	
+  00000013 01  00                14 		.byte		0
+                                 15 		.align		2
+  00000014 01  0104 0001         16 		.4byte		0x01040001
+                                 17 		.section	.text_vle,,c
+                                 18 		.section	.debug_frame,,n
+                                 19 	__local_cie: 
+  00000000 02  0000 0010         20 		.word	.LE-.LS
+                                 21 	.LS:
+  00000004 02  ffff ffff         22 		.word	-1
+  00000008 02  01                23 		.byte	1
+  00000009 02  00                24 		.byte	0
+  0000000a 02  04                25 		.uleb128	4
+  0000000b 02  7c                26 		.sleb128	-4
+  0000000c 02  6c                27 		.byte	108
+  0000000d 02  0c                28 		.byte	0x0c
+  0000000e 02  01                29 		.byte	1
+  0000000f 02  00                30 		.byte	0
+  00000010 02  08                31 		.byte	8
+  00000011 02  6c                32 		.byte	108
+                                 33 		.fill           (.LS-.)&3
+                                 34 	.LE:
+                                 35 		.section	.debug_line,,n
+                                 36 	.L8:
+                                 37 		.section	.text_vle,,c
+                                 38 	.L4:
+  00000000 00                    39 		.0byte		.L2
+  00000000 03  0000 00c3 0002    40 		.d2_line_start	.debug_line
+  00000006 03  0000 0013 0201       	
+  0000000c 03  ff04 0d00 0101       	
+  00000012 03  0101 0000 0001       	
+  00000018 03  0000 0100 00         	
+                                 41 		.section	.debug_abbrev,,n
+                                 42 	.L9:
+                                 43 		.section	.debug_info,,n
+                                 44 	.L2:
+  00000000 05  0000 0187         45 		.4byte		.L3-.L1
+                                 46 	.L1:
+  00000004 05  0002              47 		.2byte		0x2
+  00000006 05  0000 0000         48 		.4byte		.L9
+  0000000a 05  04                49 		.byte		0x4
+                                 50 		.section	.debug_abbrev,,n
+  00000000 04  01                51 		.uleb128	1
+  00000001 04  11                52 		.uleb128	17
+  00000002 04  01                53 		.byte		0x1
+  00000003 04  01                54 		.uleb128	1
+  00000004 04  13                55 		.uleb128	19
+  00000005 04  03                56 		.uleb128	3
+  00000006 04  08                57 		.uleb128	8
+  00000007 04  25                58 		.uleb128	37
+  00000008 04  08                59 		.uleb128	8
+  00000009 04  1b                60 		.uleb128	27
+  0000000a 04  08                61 		.uleb128	8
+  0000000b 04  13                62 		.uleb128	19
+  0000000c 04  0f                63 		.uleb128	15
+  0000000d 04  11                64 		.uleb128	17
+  0000000e 04  01                65 		.uleb128	1
+  0000000f 04  12                66 		.uleb128	18
+  00000010 04  01                67 		.uleb128	1
+  00000011 04  10                68 		.uleb128	16
+  00000012 04  06                69 		.uleb128	6
+  00000013 04  00                70 		.uleb128	0
+  00000014 04  00                71 		.uleb128	0
+                                 72 		.section	.debug_info,,n
+  0000000b 05  01                73 		.sleb128	1
+  0000000c 05  0000 018a         74 		.4byte		.L7-.L2
+  00000010 05  433a 5c55 7365    75 		.byte		"C:\\Users\\kucha\\Downloads\\group four default files\\src\\main.c"
+  00000016 05  7273 5c6b 7563       	
+  0000001c 05  6861 5c44 6f77       	
+  00000022 05  6e6c 6f61 6473       	
+  00000028 05  5c67 726f 7570       	
+  0000002e 05  2066                 	
+  0000004c 05  00                76 		.byte		0
+  0000004d 05  4469 6162 2044    77 		.byte		"Diab Data, Inc:dcc Rel 5.7.0.0:PPC5534"
+  00000053 05  6174 612c 2049       	
+  00000059 05  6e63 3a64 6363       	
+  0000005f 05  2052 656c 2035       	
+  00000065 05  2e37 2e30 2e30       	
+  0000006b 05  3a50                 	
+  00000073 05  00                78 		.byte		0
+  00000074 05  433a 5c55 7365    79 		.byte		"C:\\Users\\kucha\\Downloads\\group four default files"
+  0000007a 05  7273 5c6b 7563       	
+  00000080 05  6861 5c44 6f77       	
+  00000086 05  6e6c 6f61 6473       	
+  0000008c 05  5c67 726f 7570       	
+  00000092 05  2066                 	
+  000000a5 05  00                80 		.byte		0
+  000000a6 05  01                81 		.uleb128	1
+  000000a7 05  0000 0000         82 		.4byte		.L4
+  000000ab 05  0000 0000         83 		.4byte		.L5
+  000000af 05  0000 0000         84 		.4byte		.L8
+                                 85 		.section	.text_vle,,c
+                                 86 	
+                                 87 	#$$bf
+                                 88 		.align		2
+                                 89 		.globl		configure_io
+  00000014 02  0000 000c 0000    90 		.d2_cfa_start __local_cie
+  0000001a 02  0000 0000 0000       	
+  00000020 02  0000 0002            	
+                                 91 	configure_io:
+                                 92 		.section	.debug_abbrev,,n
+  00000015 04  02                93 		.uleb128	2
+  00000016 04  2e                94 		.uleb128	46
+  00000017 04  01                95 		.byte		0x1
+  00000018 04  01                96 		.uleb128	1
+  00000019 04  13                97 		.uleb128	19
+  0000001a 04  03                98 		.uleb128	3
+  0000001b 04  08                99 		.uleb128	8
+  0000001c 04  3a               100 		.uleb128	58
+  0000001d 04  06               101 		.uleb128	6
+  0000001e 04  3b               102 		.uleb128	59
+  0000001f 04  0f               103 		.uleb128	15
+  00000020 04  3f               104 		.uleb128	63
+  00000021 04  0c               105 		.uleb128	12
+  00000022 04  27               106 		.uleb128	39
+  00000023 04  0c               107 		.uleb128	12
+  00000024 04  11               108 		.uleb128	17
+  00000025 04  01               109 		.uleb128	1
+  00000026 04  12               110 		.uleb128	18
+  00000027 04  01               111 		.uleb128	1
+  00000028 04  00               112 		.uleb128	0
+  00000029 04  00               113 		.uleb128	0
+                                114 		.section	.debug_info,,n
+                                115 	.L5796:
+  000000b3 05  02               116 		.sleb128	2
+  000000b4 05  0000 00d5        117 		.4byte		.L5792-.L2
+  000000b8 05  636f 6e66 6967   118 		.byte		"configure_io"
+  000000be 05  7572 655f 696f       	
+  000000c4 05  00               119 		.byte		0
+  000000c5 05  0000 0001        120 		.4byte		.L5795
+  000000c9 05  08               121 		.uleb128	8
+  000000ca 05  01               122 		.byte		0x1
+  000000cb 05  01               123 		.byte		0x1
+  000000cc 05  0000 0000        124 		.4byte		.L5793
+  000000d0 05  0000 0000        125 		.4byte		.L5794
+                                126 		.section	.text_vle,,c
+  0000001d 03  0047 0343 3a5c   127 		.d2file		"C:\\Users\\kucha\\Downloads\\group four default files\\src\\main.c"
+  00000023 03  5c55 7365 7273       	
+  00000029 03  5c5c 6b75 6368       	
+  0000002f 03  615c 5c44 6f77       	
+  00000035 03  6e6c 6f61 6473       	
+  0000003b 03  5c5c                 	
+  00000068 03  0005 0200 0000   128 	        .d2line         9
+  0000006e 03  0003 080e            	
+                                129 	.L5793:
+                                130 	#$$ee
+  00000072 03  0200 0a          131 		.d2prologue_end
+  00000075 03  0318 0e          132 	        .d2line         33
+                                133 	#$$be
+  00000078 03  0200 0b01        134 		.d2epilogue_begin
+                                135 	#$$tl 0x0 0x0 0x0
+  00000000 00  0004             136 		se_blr
+                                137 	#$$ef
+                                138 		.d2_cfa_end 2
+                                139 		.section	.debug_info,,n
+  000000d4 05  00               140 		.sleb128	0
+                                141 	.L5792:
+                                142 		.section	.text_vle,,c
+                                143 	.L5794:
+                                144 		.type		configure_io,@function
+                                145 		.size		configure_io,.-configure_io
+                                146 	# Number of nodes = 0
+                                147 	
+                                148 	# Allocations for configure_io
+                                149 	
+                                150 	#$$bf
+                                151 		.align		2
+                                152 		.globl		main
+  00000024 02  0000 0014 0000   153 		.d2_cfa_start __local_cie
+  0000002a 02  0000 0000 0000       	
+  00000030 02  0000 0016            	
+                                154 	main:
+                                155 		.section	.debug_info,,n
+                                156 	.L5802:
+  000000d5 05  02               157 		.sleb128	2
+  000000d6 05  0000 00ef        158 		.4byte		.L5799-.L2
+  000000da 05  6d61 696e        159 		.byte		"main"
+  000000de 05  00               160 		.byte		0
+  000000df 05  0000 0001        161 		.4byte		.L5795
+  000000e3 05  25               162 		.uleb128	37
+  000000e4 05  01               163 		.byte		0x1
+  000000e5 05  01               164 		.byte		0x1
+  000000e6 05  0000 0000        165 		.4byte		.L5800
+  000000ea 05  0000 0000        166 		.4byte		.L5801
+                                167 		.section	.text_vle,,c
+  0000007c 03  0305 16          168 	        .d2line         38
+                                169 	.L5800:
+  00000004 00  1821 06f0        170 		e_stwu		r1,-16(r1)
+  00000034 02  410e 10          171 		.d2_cfa_def_cfa_offset	16
+  00000008 00  0080             172 		se_mflr		r0,lr
+  0000000a 00  d501             173 		se_stw		r0,20(r1)
+  00000037 02  4111 6c7f        174 		.d2_cfa_offset    108,-1
+                                175 	#$$ee
+  0000007f 03  0204 0a          176 		.d2prologue_end
+  00000082 03  0304 0e          177 	        .d2line         42
+                                178 	#$$fn 0x1ff8 0 0 0x1
+                                179 	#$$tl 0x0 0x0 0x0
+                                180 	#$$rs 0
+  0000000c 00  7800 0001        181 		bl		init
+                                182 	.L5780:
+  00000085 03  0313 16          183 	        .d2line         61
+  00000010 00  e800             184 		b		.L5780
+  00000088 03  14               185 	        .d2line         63
+                                186 	#$$be
+  00000089 03  0200 0b01        187 		.d2epilogue_begin
+  00000012 00  c501             188 		se_lwz		r0,20(r1)
+  00000014 00  0090             189 		se_mtlr		r0
+  00000016 00  20f1             190 		se_addi		r1,16
+                                191 	#$$tl 0x0 0x0 0x0
+  00000018 00  0004             192 		se_blr
+                                193 	#$$ef
+                                194 		.d2_cfa_end 2
+                                195 		.section	.debug_info,,n
+  000000ee 05  00               196 		.sleb128	0
+                                197 	.L5799:
+                                198 		.section	.text_vle,,c
+                                199 	.L5801:
+                                200 		.type		main,@function
+                                201 		.size		main,.-main
+                                202 	# Number of nodes = 3
+                                203 	
+                                204 	# Allocations for main
+                                205 	#	not allocated	value
+                                206 	
+                                207 	#$$bf
+                                208 		.align		2
+                                209 		.globl		showdata
+  0000003c 02  0000 000c 0000   210 		.d2_cfa_start __local_cie
+  00000042 02  0000 0000 0000       	
+  00000048 02  0000 0002            	
+                                211 	showdata:
+                                212 		.section	.debug_info,,n
+                                213 	.L5813:
+  000000ef 05  02               214 		.sleb128	2
+  000000f0 05  0000 0120        215 		.4byte		.L5810-.L2
+  000000f4 05  7368 6f77 6461   216 		.byte		"showdata"
+  000000fa 05  7461                 	
+  000000fc 05  00               217 		.byte		0
+  000000fd 05  0000 0001        218 		.4byte		.L5795
+  00000101 05  44               219 		.uleb128	68
+  00000102 05  01               220 		.byte		0x1
+  00000103 05  01               221 		.byte		0x1
+  00000104 05  0000 0000        222 		.4byte		.L5811
+  00000108 05  0000 0000        223 		.4byte		.L5812
+                                224 		.section	.debug_abbrev,,n
+  0000002a 04  03               225 		.uleb128	3
+  0000002b 04  05               226 		.uleb128	5
+  0000002c 04  00               227 		.byte		0x0
+  0000002d 04  3a               228 		.uleb128	58
+  0000002e 04  06               229 		.uleb128	6
+  0000002f 04  3b               230 		.uleb128	59
+  00000030 04  0f               231 		.uleb128	15
+  00000031 04  03               232 		.uleb128	3
+  00000032 04  08               233 		.uleb128	8
+  00000033 04  49               234 		.uleb128	73
+  00000034 04  10               235 		.uleb128	16
+  00000035 04  02               236 		.uleb128	2
+  00000036 04  09               237 		.uleb128	9
+  00000037 04  00               238 		.uleb128	0
+  00000038 04  00               239 		.uleb128	0
+                                240 		.section	.debug_info,,n
+                                241 	.L5814:
+  0000010c 05  03               242 		.sleb128	3
+  0000010d 05  0000 0001        243 		.4byte		.L5795
+  00000111 05  44               244 		.uleb128	68
+  00000112 05  7661 6c75 65     245 		.byte		"value"
+  00000117 05  00               246 		.byte		0
+  00000118 05  0000 0000        247 		.4byte		.L5815
+  0000011c 05  02               248 		.sleb128	2
+  0000011d 05  90               249 		.byte		0x90
+  0000011e 05  03               250 		.uleb128	3
+                                251 		.section	.text_vle,,c
+  0000008d 03  0306 22          252 	        .d2line         69
+                                253 	.L5811:
+                                254 	#$$ee
+  00000090 03  0200 0a          255 		.d2prologue_end
+  00000093 03  0321 0e          256 	        .d2line         102
+                                257 	#$$be
+  00000096 03  0200 0b01        258 		.d2epilogue_begin
+                                259 	#$$tl 0x0 0x0 0x0
+  0000001c 00  0004             260 		se_blr
+                                261 	#$$ef
+                                262 		.d2_cfa_end 2
+                                263 		.section	.debug_info,,n
+  0000011f 05  00               264 		.sleb128	0
+                                265 	.L5810:
+                                266 		.section	.text_vle,,c
+                                267 	.L5812:
+                                268 		.type		showdata,@function
+                                269 		.size		showdata,.-showdata
+                                270 	# Number of nodes = 18
+                                271 	
+                                272 	# Allocations for showdata
+                                273 	#	not allocated	value
+                                274 	
+                                275 	#$$bf
+                                276 		.align		2
+                                277 		.globl		conf_timer1
+  0000004c 02  0000 000c 0000   278 		.d2_cfa_start __local_cie
+  00000052 02  0000 0000 0000       	
+  00000058 02  0000 0002            	
+                                279 	conf_timer1:
+                                280 		.section	.debug_info,,n
+                                281 	.L5820:
+  00000120 05  02               282 		.sleb128	2
+  00000121 05  0000 0141        283 		.4byte		.L5817-.L2
+  00000125 05  636f 6e66 5f74   284 		.byte		"conf_timer1"
+  0000012b 05  696d 6572 31         	
+  00000130 05  00               285 		.byte		0
+  00000131 05  0000 0001        286 		.4byte		.L5795
+  00000135 05  67               287 		.uleb128	103
+  00000136 05  01               288 		.byte		0x1
+  00000137 05  01               289 		.byte		0x1
+  00000138 05  0000 0000        290 		.4byte		.L5818
+  0000013c 05  0000 0000        291 		.4byte		.L5819
+                                292 		.section	.text_vle,,c
+  0000009a 03  18               293 	        .d2line         104
+                                294 	.L5818:
+                                295 	#$$ee
+  0000009b 03  0200 0a          296 		.d2prologue_end
+  0000009e 03  0308 0e          297 	        .d2line         112
+                                298 	#$$be
+  000000a1 03  0200 0b01        299 		.d2epilogue_begin
+                                300 	#$$tl 0x0 0x0 0x0
+  00000020 00  0004             301 		se_blr
+                                302 	#$$ef
+                                303 		.d2_cfa_end 2
+                                304 		.section	.debug_info,,n
+  00000140 05  00               305 		.sleb128	0
+                                306 	.L5817:
+                                307 		.section	.text_vle,,c
+                                308 	.L5819:
+                                309 		.type		conf_timer1,@function
+                                310 		.size		conf_timer1,.-conf_timer1
+                                311 	# Number of nodes = 0
+                                312 	
+                                313 	# Allocations for conf_timer1
+                                314 	
+                                315 	#$$bf
+                                316 		.align		2
+                                317 		.globl		timer0_intr
+  0000005c 02  0000 000c 0000   318 		.d2_cfa_start __local_cie
+  00000062 02  0000 0000 0000       	
+  00000068 02  0000 0002            	
+                                319 	timer0_intr:
+                                320 		.section	.debug_info,,n
+                                321 	.L5825:
+  00000141 05  02               322 		.sleb128	2
+  00000142 05  0000 0162        323 		.4byte		.L5822-.L2
+  00000146 05  7469 6d65 7230   324 		.byte		"timer0_intr"
+  0000014c 05  5f69 6e74 72         	
+  00000151 05  00               325 		.byte		0
+  00000152 05  0000 0001        326 		.4byte		.L5795
+  00000156 05  72               327 		.uleb128	114
+  00000157 05  01               328 		.byte		0x1
+  00000158 05  01               329 		.byte		0x1
+  00000159 05  0000 0000        330 		.4byte		.L5823
+  0000015d 05  0000 0000        331 		.4byte		.L5824
+                                332 		.section	.text_vle,,c
+  000000a5 03  0303 16          333 	        .d2line         115
+                                334 	.L5823:
+                                335 	#$$ee
+  000000a8 03  0200 0a          336 		.d2prologue_end
+  000000ab 03  0304 0e          337 	        .d2line         119
+                                338 	#$$be
+  000000ae 03  0200 0b01        339 		.d2epilogue_begin
+                                340 	#$$tl 0x0 0x0 0x0
+  00000024 00  0004             341 		se_blr
+                                342 	#$$ef
+                                343 		.d2_cfa_end 2
+                                344 		.section	.debug_info,,n
+  00000161 05  00               345 		.sleb128	0
+                                346 	.L5822:
+                                347 		.section	.text_vle,,c
+                                348 	.L5824:
+                                349 		.type		timer0_intr,@function
+                                350 		.size		timer0_intr,.-timer0_intr
+                                351 	# Number of nodes = 0
+                                352 	
+                                353 	# Allocations for timer0_intr
+                                354 	
+                                355 	#$$bf
+                                356 		.align		2
+                                357 		.globl		timer1_intr
+  0000006c 02  0000 000c 0000   358 		.d2_cfa_start __local_cie
+  00000072 02  0000 0000 0000       	
+  00000078 02  0000 0002            	
+                                359 	timer1_intr:
+                                360 		.section	.debug_info,,n
+                                361 	.L5830:
+  00000162 05  02               362 		.sleb128	2
+  00000163 05  0000 0183        363 		.4byte		.L5827-.L2
+  00000167 05  7469 6d65 7231   364 		.byte		"timer1_intr"
+  0000016d 05  5f69 6e74 72         	
+  00000172 05  00               365 		.byte		0
+  00000173 05  0000 0001        366 		.4byte		.L5795
+  00000177 05  78               367 		.uleb128	120
+  00000178 05  01               368 		.byte		0x1
+  00000179 05  01               369 		.byte		0x1
+  0000017a 05  0000 0000        370 		.4byte		.L5828
+  0000017e 05  0000 0000        371 		.4byte		.L5829
+                                372 		.section	.text_vle,,c
+  000000b2 03  18               373 	        .d2line         121
+                                374 	.L5828:
+                                375 	#$$ee
+  000000b3 03  0200 0a          376 		.d2prologue_end
+  000000b6 03  0303 0e          377 	        .d2line         124
+                                378 	#$$be
+  000000b9 03  0200 0b01        379 		.d2epilogue_begin
+                                380 	#$$tl 0x0 0x0 0x0
+  00000028 00  0004             381 		se_blr
+                                382 	#$$ef
+                                383 		.d2_cfa_end 2
+                                384 		.section	.debug_info,,n
+  00000182 05  00               385 		.sleb128	0
+                                386 	.L5827:
+                                387 		.section	.text_vle,,c
+                                388 	.L5829:
+                                389 		.type		timer1_intr,@function
+                                390 		.size		timer1_intr,.-timer1_intr
+                                391 	# Number of nodes = 0
+                                392 	
+                                393 	# Allocations for timer1_intr
+                                394 	
+                                395 	# Allocations for module
+                                396 		.section	.debug_abbrev,,n
+  00000039 04  04               397 		.uleb128	4
+  0000003a 04  24               398 		.uleb128	36
+  0000003b 04  00               399 		.byte		0x0
+  0000003c 04  03               400 		.uleb128	3
+  0000003d 04  08               401 		.uleb128	8
+  0000003e 04  3e               402 		.uleb128	62
+  0000003f 04  0b               403 		.uleb128	11
+  00000040 04  0b               404 		.uleb128	11
+  00000041 04  0b               405 		.uleb128	11
+  00000042 04  00               406 		.uleb128	0
+  00000043 04  00               407 		.uleb128	0
+                                408 		.section	.debug_info,,n
+                                409 	.L5815:
+  00000183 05  04               410 		.sleb128	4
+  00000184 05  696e 74          411 		.byte		"int"
+  00000187 05  00               412 		.byte		0
+  00000188 05  05               413 		.byte		0x5
+  00000189 05  04               414 		.byte		0x4
+                                415 	.L7:
+  0000018a 05  00               416 		.sleb128	0
+                                417 	.L3:
+                                418 		.section	.text_vle,,c
+                                419 	.L5:
+                                420 	.L5795: 	.d2filenum "C:\\Users\\kucha\\Downloads\\group four default files\\src\\main
+                                    	.c"
+  000000bd 03  0005 0200 0000   421 		.d2_line_end
+  000000c3 03  0000 0101            	
+                                422 		.section	.debug_abbrev,,n
+  00000044 04  00               423 		.sleb128	0
+

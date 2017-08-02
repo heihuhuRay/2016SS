@@ -1,0 +1,33 @@
+[Application]
+ApplicationPath=C:\Users\venr\Downloads\Unit2\Unit2 - Task 2.2\output\Unit2.elf
+LoaderTool=PPC
+Target=PPC
+DebugTool=RLink_PPC
+Format=ELF
+CodeOffset=0x0
+ApplicationComponents=
+[Device]
+Name=SPC560P50_VLE
+[Debug]
+ToolName=RLink_PPC
+Explore=No
+Startup=1
+StartupSymb=main
+[RLinkPPCDrv options]
+AloneInChain=1
+IRB=0
+IRA=0
+DRB=0
+DRA=0
+CheckCheckSum=0
+Debug=1
+Freeze_Timers_On_Debug_Events=1
+Erase_Flash_Before_Debug=1
+CustomAddressRange=0
+IgnoreDataFlash=0
+IgnoreMainFlash=0
+FirstAddress=0
+LastAddress=-1
+BlankCheckBeforeLoadFile=1
+[SimFile]
+path=C:\Programme\Raisonance\Ride\sim\PPC\SPC560P50_VLE.sim

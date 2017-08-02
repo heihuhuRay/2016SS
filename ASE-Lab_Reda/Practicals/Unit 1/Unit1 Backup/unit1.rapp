@@ -1,0 +1,82 @@
+
+<ApplicationBuild Header="unit1" Extern=".\unit1.rapp" Path=".\unit1.rapp" AsyncBuild="" OutputFile=".\output\unit1.elf" sate="96" >
+	<NodeC Path=".\src\bam_init.c" Header="bam_init.c" Marker="-1" AsyncBuild="" OutputFile=".\output\bam_init.o" sate="0" />
+	<NodeASM Path=".\src\crt0.s" Header="crt0.s" Marker="-1" AsyncBuild="" OutputFile=".\output\crt0.o" sate="0" />
+	<NodeASM Path=".\src\ecc_init.s" Header="ecc_init.s" Marker="-1" AsyncBuild="" OutputFile=".\output\ecc_init.o" sate="0" />
+	<NodeC Path=".\src\main.c" Header="main.c" Marker="0" AsyncBuild="" OutputFile=".\output\main.o" sate="2" >
+		<Options>
+			<Config Header="Standard" >
+				<Set Header="COMPILER" >
+					<Section Header="Comp" >
+						<Property Header="Compile" Value="dcc -tPPCVLEEN:simple -Xnested-interrupts -XO -c -D__PPC_VLE__ -g  -I .\src -Xdebug-local-cie -Wa,-l -o &quot;$(NodeC.Build.OutputFile)&quot; $(CmdInput)" />
+								
+					</Section>
+						
+				</Set>
+			</Config>
+		</Options>
+	</NodeC>
+	<NodeText Path=".\src\readme.txt" Header="readme.txt" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+	<NodeC Path=".\src\romcopy.c" Header="romcopy.c" Marker="-1" AsyncBuild="" OutputFile=".\output\romcopy.o" sate="0" />
+	<NodeC Path=".\src\api.c" Header="api.c" Marker="-1" AsyncBuild="" OutputFile=".\output\api.o" sate="0" />
+	<Options>
+		<Config Header="Standard" >
+			<Set Header="ApplicationBuild" >
+				<Section Header="General" >
+					<Property Header="TargetFamily" Value="PPC" />
+																																																																															
+				</Section>
+				<Section Header="Directories" >
+					<Property Header="OutDir" Value="$(ApplicationDir)\output" Removable="1" />
+					<Property Header="ListDir" Value="$(ApplicationDir)\output" Removable="1" />
+																																																													
+				</Section>
+																																															
+			</Set>
+			<Set Header="Target" >
+				<Section Header="ProcessorPPC" >
+					<Property Header="Processor" Value="SPC560P50_VLE" />
+																																																																															
+				</Section>
+				<Section Header="ToolSetPPC" >
+					<Property Header="BuildToolSetPPC" Value="GENERIC\GENERIC.config" />
+																																																																															
+				</Section>
+																																																													
+			</Set>
+			<Set Header="COMPILER" >
+				<Section Header="Comp" >
+					<Property Header="Compile" Value="dcc -tPPCVLEEN:simple -Xnested-interrupts -O -c -D__PPC_VLE__ -g  -I .\src -Xdebug-local-cie -Wa,-l -o &quot;$(NodeC.Build.OutputFile)&quot; $(CmdInput)" />
+																
+				</Section>
+												
+			</Set>
+			<Set Header="ASSEMBLER" >
+				<Section Header="Assemb" >
+					<Property Header="Assemble" Value="das -tPPCVLEEN:simple -g -o &quot;$(NodeASM.Build.OutputFile)&quot; $(CmdInput)" />
+																																																				
+				</Section>
+				<Section Header="Options" >
+					<Property Header="Run" Value="No" Removable="1" />
+					<Property Header="Command" Value="" Removable="1" />
+																																											
+				</Section>
+																																	
+			</Set>
+			<Set Header="LINKER" >
+				<Section Header="Ln" >
+					<Property Header="Link" Value="rexrdr.exe &quot;$(Build.ListingFile)&quot; 1 dld -tPPC5534VEN:simple .\src\default560P.dld -m6 -lc -limpl $(CmdInput) -o &quot;$(Build.OutputFile)&quot;" />
+																																											
+				</Section>
+				<Section Header="Options" >
+					<Property Header="RunA" Value="Yes" Removable="1" />
+					<Property Header="CommandA" Value="ddump  -Rv &quot;$(Build.OutputFile)&quot; -o &quot;$(LINKER.General.NoExtOutputFile).s19&quot;" Removable="1" />
+																																		
+				</Section>
+																										
+			</Set>
+					
+		</Config>
+			
+	</Options>
+</ApplicationBuild>

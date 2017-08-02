@@ -1,0 +1,403 @@
+                                  1 	#$$m2		- PowerPC mnemonics
+                                  2 	#$$pVLE		- PowerPC VLE encoding
+                                  3 	#$$oPPC5534  - Optimized for PPC5534
+                                  4 	#$$ko 9		- Reorder info
+                                  5 		.file		"main.c"
+                                  6 	#$$eb
+                                  7 	#$$sz 0
+                                  8 	#$$fp 0
+                                  9 		.section	.PPC.EMB.apuinfo,,@note
+  00000000 01  0000 0008         10 		.4byte		8
+  00000004 01  0000 0004         11 		.4byte		4
+  00000008 01  0000 0002         12 		.4byte		2
+  0000000c 01  4150 5569 6e66    13 		.byte		"APUinfo"
+  00000012 01  6f                   	
+  00000013 01  00                14 		.byte		0
+                                 15 		.align		2
+  00000014 01  0104 0001         16 		.4byte		0x01040001
+                                 17 		.section	.text_vle,,c
+                                 18 		.section	.debug_frame,,n
+                                 19 	__local_cie: 
+  00000000 02  0000 0010         20 		.word	.LE-.LS
+                                 21 	.LS:
+  00000004 02  ffff ffff         22 		.word	-1
+  00000008 02  01                23 		.byte	1
+  00000009 02  00                24 		.byte	0
+  0000000a 02  04                25 		.uleb128	4
+  0000000b 02  7c                26 		.sleb128	-4
+  0000000c 02  6c                27 		.byte	108
+  0000000d 02  0c                28 		.byte	0x0c
+  0000000e 02  01                29 		.byte	1
+  0000000f 02  00                30 		.byte	0
+  00000010 02  08                31 		.byte	8
+  00000011 02  6c                32 		.byte	108
+                                 33 		.fill           (.LS-.)&3
+                                 34 	.LE:
+                                 35 		.section	.debug_line,,n
+                                 36 	.L8:
+                                 37 		.section	.text_vle,,c
+                                 38 	.L4:
+  00000000 00                    39 		.0byte		.L2
+  00000000 03  0000 00ed 0002    40 		.d2_line_start	.debug_line
+  00000006 03  0000 0013 0201       	
+  0000000c 03  ff04 0d00 0101       	
+  00000012 03  0101 0000 0001       	
+  00000018 03  0000 0100 00         	
+                                 41 		.section	.debug_abbrev,,n
+                                 42 	.L9:
+                                 43 		.section	.debug_info,,n
+                                 44 	.L2:
+  00000000 05  0000 01ac         45 		.4byte		.L3-.L1
+                                 46 	.L1:
+  00000004 05  0002              47 		.2byte		0x2
+  00000006 05  0000 0000         48 		.4byte		.L9
+  0000000a 05  04                49 		.byte		0x4
+                                 50 		.section	.debug_abbrev,,n
+  00000000 04  01                51 		.uleb128	1
+  00000001 04  11                52 		.uleb128	17
+  00000002 04  01                53 		.byte		0x1
+  00000003 04  01                54 		.uleb128	1
+  00000004 04  13                55 		.uleb128	19
+  00000005 04  03                56 		.uleb128	3
+  00000006 04  08                57 		.uleb128	8
+  00000007 04  25                58 		.uleb128	37
+  00000008 04  08                59 		.uleb128	8
+  00000009 04  1b                60 		.uleb128	27
+  0000000a 04  08                61 		.uleb128	8
+  0000000b 04  13                62 		.uleb128	19
+  0000000c 04  0f                63 		.uleb128	15
+  0000000d 04  11                64 		.uleb128	17
+  0000000e 04  01                65 		.uleb128	1
+  0000000f 04  12                66 		.uleb128	18
+  00000010 04  01                67 		.uleb128	1
+  00000011 04  10                68 		.uleb128	16
+  00000012 04  06                69 		.uleb128	6
+  00000013 04  00                70 		.uleb128	0
+  00000014 04  00                71 		.uleb128	0
+                                 72 		.section	.debug_info,,n
+  0000000b 05  01                73 		.sleb128	1
+  0000000c 05  0000 01af         74 		.4byte		.L7-.L2
+  00000010 05  433a 5c44 6f6b    75 		.byte		"C:\\Dokumente und Einstellungen\\haenf_local\\Eigene Dateien\\Downl
+  00000016 05  756d 656e 7465       	oads\\ASE Praktikum unit 2\\Unit2\\Unit2\\src\\main.c"
+  0000001c 05  2075 6e64 2045       	
+  00000022 05  696e 7374 656c       	
+  00000028 05  6c75 6e67 656e       	
+  0000002e 05  5c68                 	
+  0000007f 05  00                76 		.byte		0
+  00000080 05  4469 6162 2044    77 		.byte		"Diab Data, Inc:dcc Rel 5.7.0.0:PPC5534"
+  00000086 05  6174 612c 2049       	
+  0000008c 05  6e63 3a64 6363       	
+  00000092 05  2052 656c 2035       	
+  00000098 05  2e37 2e30 2e30       	
+  0000009e 05  3a50                 	
+  000000a6 05  00                78 		.byte		0
+  000000a7 05  433a 5c44 6f6b    79 		.byte		"C:\\Dokumente und Einstellungen\\haenf_local\\Eigene Dateien\\Downl
+  000000ad 05  756d 656e 7465       	oads\\ASE Praktikum unit 2\\Unit2\\Unit2"
+  000000b3 05  2075 6e64 2045       	
+  000000b9 05  696e 7374 656c       	
+  000000bf 05  6c75 6e67 656e       	
+  000000c5 05  5c68                 	
+  0000010b 05  00                80 		.byte		0
+  0000010c 05  01                81 		.uleb128	1
+  0000010d 05  0000 0000         82 		.4byte		.L4
+  00000111 05  0000 0000         83 		.4byte		.L5
+  00000115 05  0000 0000         84 		.4byte		.L8
+                                 85 		.section	.text_vle,,c
+                                 86 	
+                                 87 	#$$bf
+                                 88 		.align		2
+                                 89 		.globl		conf_can
+  00000014 02  0000 000c 0000    90 		.d2_cfa_start __local_cie
+  0000001a 02  0000 0000 0000       	
+  00000020 02  0000 000c            	
+                                 91 	conf_can:
+                                 92 		.section	.debug_abbrev,,n
+  00000015 04  02                93 		.uleb128	2
+  00000016 04  2e                94 		.uleb128	46
+  00000017 04  01                95 		.byte		0x1
+  00000018 04  01                96 		.uleb128	1
+  00000019 04  13                97 		.uleb128	19
+  0000001a 04  03                98 		.uleb128	3
+  0000001b 04  08                99 		.uleb128	8
+  0000001c 04  3a               100 		.uleb128	58
+  0000001d 04  06               101 		.uleb128	6
+  0000001e 04  3b               102 		.uleb128	59
+  0000001f 04  0f               103 		.uleb128	15
+  00000020 04  3f               104 		.uleb128	63
+  00000021 04  0c               105 		.uleb128	12
+  00000022 04  11               106 		.uleb128	17
+  00000023 04  01               107 		.uleb128	1
+  00000024 04  12               108 		.uleb128	18
+  00000025 04  01               109 		.uleb128	1
+  00000026 04  00               110 		.uleb128	0
+  00000027 04  00               111 		.uleb128	0
+                                112 		.section	.debug_info,,n
+                                113 	.L5789:
+  00000119 05  02               114 		.sleb128	2
+  0000011a 05  0000 0136        115 		.4byte		.L5785-.L2
+  0000011e 05  636f 6e66 5f63   116 		.byte		"conf_can"
+  00000124 05  616e                 	
+  00000126 05  00               117 		.byte		0
+  00000127 05  0000 0001        118 		.4byte		.L5788
+  0000012b 05  04               119 		.uleb128	4
+  0000012c 05  01               120 		.byte		0x1
+  0000012d 05  0000 0000        121 		.4byte		.L5786
+  00000131 05  0000 0000        122 		.4byte		.L5787
+                                123 		.section	.text_vle,,c
+  0000001d 03  007d 0343 3a5c   124 		.d2file		"C:\\Dokumente und Einstellungen\\haenf_local\\Eigene Dateien\\Downl
+  00000023 03  5c44 6f6b 756d       	oads\\ASE Praktikum unit 2\\Unit2\\Unit2\\src\\main.c"
+  00000029 03  656e 7465 2075       	
+  0000002f 03  6e64 2045 696e       	
+  00000035 03  7374 656c 6c75       	
+  0000003b 03  6e67                 	
+  0000009e 03  0005 0200 0000   125 	        .d2line         5
+  000000a4 03  0003 040e            	
+                                126 	.L5786:
+                                127 	#$$ee
+  000000a8 03  0200 0a          128 		.d2prologue_end
+  000000ab 03  10               129 	        .d2line         7
+  00000000 00  70ff e7fc        130 		e_lis		r7,-4
+  00000004 00  4806             131 		se_li		r6,0
+  00000006 00  54c7 0880        132 		e_stw		r6,2176(r7)
+                                133 	#$$vo
+  000000ac 03  030d 22          134 	        .d2line         20
+                                135 	#$$be
+  000000af 03  0200 0b01        136 		.d2epilogue_begin
+                                137 	#$$tl 0x0 0x0 0x0
+  0000000a 00  0004             138 		se_blr
+                                139 	#$$ef
+                                140 		.d2_cfa_end 2
+                                141 		.section	.debug_info,,n
+  00000135 05  00               142 		.sleb128	0
+                                143 	.L5785:
+                                144 		.section	.text_vle,,c
+                                145 	.L5787:
+                                146 		.type		conf_can,@function
+                                147 		.size		conf_can,.-conf_can
+                                148 	# Number of nodes = 4
+                                149 	
+                                150 	# Allocations for conf_can
+                                151 	#	not allocated	$$1
+                                152 	
+                                153 	#$$bf
+                                154 		.align		2
+                                155 		.globl		main
+  00000024 02  0000 0014 0000   156 		.d2_cfa_start __local_cie
+  0000002a 02  0000 0000 0000       	
+  00000030 02  0000 0016            	
+                                157 	main:
+                                158 		.section	.debug_abbrev,,n
+  00000028 04  03               159 		.uleb128	3
+  00000029 04  2e               160 		.uleb128	46
+  0000002a 04  01               161 		.byte		0x1
+  0000002b 04  01               162 		.uleb128	1
+  0000002c 04  13               163 		.uleb128	19
+  0000002d 04  03               164 		.uleb128	3
+  0000002e 04  08               165 		.uleb128	8
+  0000002f 04  3a               166 		.uleb128	58
+  00000030 04  06               167 		.uleb128	6
+  00000031 04  3b               168 		.uleb128	59
+  00000032 04  0f               169 		.uleb128	15
+  00000033 04  3f               170 		.uleb128	63
+  00000034 04  0c               171 		.uleb128	12
+  00000035 04  27               172 		.uleb128	39
+  00000036 04  0c               173 		.uleb128	12
+  00000037 04  11               174 		.uleb128	17
+  00000038 04  01               175 		.uleb128	1
+  00000039 04  12               176 		.uleb128	18
+  0000003a 04  01               177 		.uleb128	1
+  0000003b 04  00               178 		.uleb128	0
+  0000003c 04  00               179 		.uleb128	0
+                                180 		.section	.debug_info,,n
+                                181 	.L5794:
+  00000136 05  03               182 		.sleb128	3
+  00000137 05  0000 0150        183 		.4byte		.L5791-.L2
+  0000013b 05  6d61 696e        184 		.byte		"main"
+  0000013f 05  00               185 		.byte		0
+  00000140 05  0000 0001        186 		.4byte		.L5788
+  00000144 05  16               187 		.uleb128	22
+  00000145 05  01               188 		.byte		0x1
+  00000146 05  01               189 		.byte		0x1
+  00000147 05  0000 0000        190 		.4byte		.L5792
+  0000014b 05  0000 0000        191 		.4byte		.L5793
+                                192 		.section	.text_vle,,c
+  000000b3 03  0303 12          193 	        .d2line         23
+                                194 	.L5792:
+  0000000c 00  1821 06f0        195 		e_stwu		r1,-16(r1)
+  00000034 02  410e 10          196 		.d2_cfa_def_cfa_offset	16
+  00000010 00  0080             197 		se_mflr		r0,lr
+  00000012 00  d501             198 		se_stw		r0,20(r1)
+  00000037 02  4111 6c7f        199 		.d2_cfa_offset    108,-1
+                                200 	#$$ee
+  000000b6 03  0204 0a          201 		.d2prologue_end
+  000000b9 03  0f               202 	        .d2line         24
+                                203 	#$$fn 0x1ff8 0 0 0x1
+                                204 	#$$tl 0x0 0x0 0x0
+                                205 	#$$rs 0
+  00000014 00  7800 0001        206 		bl		init
+                                207 	.L5780:
+  000000ba 03  0309 16          208 	        .d2line         33
+  00000018 00  e800             209 		b		.L5780
+  000000bd 03  13               210 	        .d2line         34
+                                211 	#$$be
+  000000be 03  0200 0b01        212 		.d2epilogue_begin
+  0000001a 00  c501             213 		se_lwz		r0,20(r1)
+  0000001c 00  0090             214 		se_mtlr		r0
+  0000001e 00  20f1             215 		se_addi		r1,16
+                                216 	#$$tl 0x0 0x0 0x0
+  00000020 00  0004             217 		se_blr
+                                218 	#$$ef
+                                219 		.d2_cfa_end 2
+                                220 		.section	.debug_info,,n
+  0000014f 05  00               221 		.sleb128	0
+                                222 	.L5791:
+                                223 		.section	.text_vle,,c
+                                224 	.L5793:
+                                225 		.type		main,@function
+                                226 		.size		main,.-main
+                                227 	# Number of nodes = 3
+                                228 	
+                                229 	# Allocations for main
+                                230 	
+                                231 	#$$bf
+                                232 		.align		2
+                                233 		.globl		timer0_intr
+  0000003c 02  0000 000c 0000   234 		.d2_cfa_start __local_cie
+  00000042 02  0000 0000 0000       	
+  00000048 02  0000 0002            	
+                                235 	timer0_intr:
+                                236 		.section	.debug_info,,n
+                                237 	.L5799:
+  00000150 05  03               238 		.sleb128	3
+  00000151 05  0000 0171        239 		.4byte		.L5796-.L2
+  00000155 05  7469 6d65 7230   240 		.byte		"timer0_intr"
+  0000015b 05  5f69 6e74 72         	
+  00000160 05  00               241 		.byte		0
+  00000161 05  0000 0001        242 		.4byte		.L5788
+  00000165 05  25               243 		.uleb128	37
+  00000166 05  01               244 		.byte		0x1
+  00000167 05  01               245 		.byte		0x1
+  00000168 05  0000 0000        246 		.4byte		.L5797
+  0000016c 05  0000 0000        247 		.4byte		.L5798
+                                248 		.section	.text_vle,,c
+  000000c2 03  0304 22          249 	        .d2line         38
+                                250 	.L5797:
+                                251 	#$$ee
+  000000c5 03  0200 0a          252 		.d2prologue_end
+  000000c8 03  10               253 	        .d2line         40
+                                254 	#$$be
+  000000c9 03  0200 0b01        255 		.d2epilogue_begin
+                                256 	#$$tl 0x0 0x0 0x0
+  00000024 00  0004             257 		se_blr
+                                258 	#$$ef
+                                259 		.d2_cfa_end 2
+                                260 		.section	.debug_info,,n
+  00000170 05  00               261 		.sleb128	0
+                                262 	.L5796:
+                                263 		.section	.text_vle,,c
+                                264 	.L5798:
+                                265 		.type		timer0_intr,@function
+                                266 		.size		timer0_intr,.-timer0_intr
+                                267 	# Number of nodes = 0
+                                268 	
+                                269 	# Allocations for timer0_intr
+                                270 	
+                                271 	#$$bf
+                                272 		.align		2
+                                273 		.globl		can_send
+  0000004c 02  0000 000c 0000   274 		.d2_cfa_start __local_cie
+  00000052 02  0000 0000 0000       	
+  00000058 02  0000 0002            	
+                                275 	can_send:
+                                276 		.section	.debug_info,,n
+                                277 	.L5804:
+  00000171 05  03               278 		.sleb128	3
+  00000172 05  0000 018f        279 		.4byte		.L5801-.L2
+  00000176 05  6361 6e5f 7365   280 		.byte		"can_send"
+  0000017c 05  6e64                 	
+  0000017e 05  00               281 		.byte		0
+  0000017f 05  0000 0001        282 		.4byte		.L5788
+  00000183 05  2a               283 		.uleb128	42
+  00000184 05  01               284 		.byte		0x1
+  00000185 05  01               285 		.byte		0x1
+  00000186 05  0000 0000        286 		.4byte		.L5802
+  0000018a 05  0000 0000        287 		.4byte		.L5803
+                                288 		.section	.text_vle,,c
+  000000cd 03  0303 16          289 	        .d2line         43
+                                290 	.L5802:
+                                291 	#$$ee
+  000000d0 03  0200 0a          292 		.d2prologue_end
+  000000d3 03  0313 0e          293 	        .d2line         62
+                                294 	#$$be
+  000000d6 03  0200 0b01        295 		.d2epilogue_begin
+                                296 	#$$tl 0x0 0x0 0x0
+  00000028 00  0004             297 		se_blr
+                                298 	#$$ef
+                                299 		.d2_cfa_end 2
+                                300 		.section	.debug_info,,n
+  0000018e 05  00               301 		.sleb128	0
+                                302 	.L5801:
+                                303 		.section	.text_vle,,c
+                                304 	.L5803:
+                                305 		.type		can_send,@function
+                                306 		.size		can_send,.-can_send
+                                307 	# Number of nodes = 0
+                                308 	
+                                309 	# Allocations for can_send
+                                310 	
+                                311 	#$$bf
+                                312 		.align		2
+                                313 		.globl		can_recieve
+  0000005c 02  0000 000c 0000   314 		.d2_cfa_start __local_cie
+  00000062 02  0000 0000 0000       	
+  00000068 02  0000 0002            	
+                                315 	can_recieve:
+                                316 		.section	.debug_info,,n
+                                317 	.L5809:
+  0000018f 05  02               318 		.sleb128	2
+  00000190 05  0000 01af        319 		.4byte		.L5806-.L2
+  00000194 05  6361 6e5f 7265   320 		.byte		"can_recieve"
+  0000019a 05  6369 6576 65         	
+  0000019f 05  00               321 		.byte		0
+  000001a0 05  0000 0001        322 		.4byte		.L5788
+  000001a4 05  40               323 		.uleb128	64
+  000001a5 05  01               324 		.byte		0x1
+  000001a6 05  0000 0000        325 		.4byte		.L5807
+  000001aa 05  0000 0000        326 		.4byte		.L5808
+                                327 		.section	.text_vle,,c
+  000000da 03  0303 16          328 	        .d2line         65
+                                329 	.L5807:
+                                330 	#$$ee
+  000000dd 03  0200 0a          331 		.d2prologue_end
+  000000e0 03  0309 0e          332 	        .d2line         74
+                                333 	#$$be
+  000000e3 03  0200 0b01        334 		.d2epilogue_begin
+                                335 	#$$tl 0x0 0x0 0x0
+  0000002c 00  0004             336 		se_blr
+                                337 	#$$ef
+                                338 		.d2_cfa_end 2
+                                339 		.section	.debug_info,,n
+  000001ae 05  00               340 		.sleb128	0
+                                341 	.L5806:
+                                342 		.section	.text_vle,,c
+                                343 	.L5808:
+                                344 		.type		can_recieve,@function
+                                345 		.size		can_recieve,.-can_recieve
+                                346 	# Number of nodes = 0
+                                347 	
+                                348 	# Allocations for can_recieve
+                                349 	
+                                350 	# Allocations for module
+                                351 		.section	.debug_info,,n
+                                352 	.L7:
+  000001af 05  00               353 		.sleb128	0
+                                354 	.L3:
+                                355 		.section	.text_vle,,c
+                                356 	.L5:
+                                357 	.L5788: 	.d2filenum "C:\\Dokumente und Einstellungen\\haenf_local\\Eigene Dateien\\Do
+                                    	wnloads\\ASE Praktikum unit 2\\Unit2\\Unit2\\src\\main.c"
+  000000e7 03  0005 0200 0000   358 		.d2_line_end
+  000000ed 03  0000 0101            	
+                                359 		.section	.debug_abbrev,,n
+  0000003d 04  00               360 		.sleb128	0
+

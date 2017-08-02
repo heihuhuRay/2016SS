@@ -1,0 +1,4 @@
+
+<Project Header="Project 'unit1.s19'" Path=".\unit1.s19.rprj" Project="Yes" AsyncBuild="" OutputFile="" sate="96" ActiveApp="unit1.s19" >
+	<ApplicationDebug Header="unit1.s19" Extern=".\unit1.s19.rapp" Path=".\unit1.s19.rapp" AsyncBuild="" OutputFile="" sate="2" />
+</Project>

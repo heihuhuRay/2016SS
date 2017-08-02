@@ -1,0 +1,2 @@
+mergesort:
+	gnatmake mergesort.adb

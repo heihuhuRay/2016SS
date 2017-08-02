@@ -1,0 +1,405 @@
+/*
+	Design by Free CSS Templates
+	http://www.freecsstemplates.org
+	Released for free under a Creative Commons Attribution 2.5 License
+*/ /* Basic */
+* {
+	margin: 0em;
+	padding: 0em;
+}
+
+h1,h2 {
+	
+}
+
+body {
+	font-family: "trebuchet ms", sans-serif;
+	font-size: 10pt;
+	background-color: #fff;
+	color: #555;
+}
+
+pre {
+	background-color: #eeeeee;
+	font-size: 9pt;
+	border: 1px solid #cccccc;
+	margin-bottom: 3em;
+	line-height: 15px;
+}
+
+img {
+	margin-bottom: 3em;
+}
+
+.breadcrumbinner img {
+	margin-bottom: 0px;
+}
+
+a {
+	color: #007788;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Outer */
+#outer {
+	position: relative;
+	margin: 1em;
+}
+
+/* Header */
+#header {
+	position: absolute;
+	top: 3.5em;
+	background: #073C4C url('images/header.jpg') top right no-repeat;
+	height: 135px;
+	width: 100%;
+}
+
+#header h1 {
+	position: absolute;
+	top: 0.6em;
+	left: 1.0em;
+	font-size: 2.5em;
+	color: #fff;
+}
+
+#header h2 {
+	position: absolute;
+	left: 2.5em;
+	font-size: 1.0em;
+	font-weight: normal;
+	color: #fff;
+}
+
+#header h2#firsth2 {
+	top: 4.5em;
+}
+
+#header h2#secondh2 {
+	top: 6.0em;
+}
+
+#header h2#thirdh2 {
+	top: 7.5em;
+	font-weight: bold;
+}
+
+#header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Breadcrumb */
+#topbreadcrumb .breadcrumbouter {
+	position: absolute;
+	top: 14.2em;
+	left: 0em;
+}
+
+.breadcrumbouter {
+	padding-top: 0.7em;
+	width: 100%;
+	background: #007788 url('images/x3.gif') top left repeat-x;
+	height: 2.5em;
+	color: #eee;
+	font-weight: bold;
+}
+
+.breadcrumbinner {
+	color: yellow;
+	padding-left: 2.4em;
+}
+
+.breadcrumbinner a {
+	color: yellow;
+}
+
+/* Menu */
+#menu {
+	position: absolute;
+	width: 100%;
+	top: 0em;
+	left: 0em;
+	background: #007788 url('images/x3.gif') top left repeat-x;
+	height: 3em;
+}
+
+#menu ul {
+	list-style: none;
+	position: absolute;
+	bottom: 0em;
+	left: 1em;
+}
+
+#menu li {
+	display: block;
+	float: left;
+	color: yellow;
+	padding: 0.75em 0em 0.75em 0em;
+	text-decoration: none;
+	font-weight: bold;
+/*	font-style: italic; */
+}
+
+.toptext {
+	color: yellow;
+	padding: 0em 0.75em 0em 0.75em;
+}
+
+#menu li a:hover {
+	background: #007788 url('images/x4.gif') top left repeat-x;
+}
+
+#menu div#search {
+	float: right;
+	padding: 0.75em 1.25em 0.75em 1.25em;
+	color: yellow;
+	font-weight: bold;
+}
+
+#searchbutton {
+	font-family: "trebuchet ms", sans-serif;
+	font-size: 10pt;
+	background-color: #fff;
+	color: #555;
+	height: 1.75em;
+}
+
+/* Content */
+#content {
+	line-height: 1.7em;
+	padding-top: 220px;
+}
+
+#content a.extlink {
+	background-color: #eee;
+	padding: 0px 2px 0px 2px;
+	margin-left: 2px;
+	border: 1px solid #ddd;
+	font-size: xx-small;
+	color: #888;
+}
+
+#content a.extlink2 {
+	background-color: #eee;
+	padding: 0px 4px 0px 4px;
+	margin-left: 2px;
+	border: 1px solid #ddd;
+	font-size: xx-small;
+	color: #888;
+}
+
+#content a.extlink:hover {
+	background-color: #ccc;
+}
+
+#content a.extlink2:hover {
+	background-color: #ccc;
+}
+
+#content .accentuate {
+	background-color: #ccc;
+	border: 1px solid #aaa;
+	padding: 3px;
+}
+
+#content .accentuate .title {
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #333;
+}
+
+#content .continue {
+	font-style: italic;
+}
+
+#content p {
+	margin-bottom: 1.5em;
+}
+
+#content div.smaller {
+	font-size: 8pt;
+}
+
+#content div.code {
+	margin-left: 1.5em;
+	font-family: courier;
+	margin-bottom: 1.5em;
+}
+
+#content p.example {
+	background-color: #eeeeee;
+	font-size: 9pt;
+	border: 1px solid #cccccc;
+	margin-bottom: 3em;
+}
+
+#content div.example {
+	background-color: #eeeeee;
+	font-size: 9pt;
+	border: 1px solid #cccccc;
+	margin-bottom: 3em;
+}
+
+#content h2,h3,h4,h5,h6 {
+	width: 100%;
+	position: relative;
+	left: -14px;
+	margin: 0em -22px 1.2em 0em;
+	color: #333;
+	padding: 1.1em 14px 0.0em 14px;
+	font-size: 1.1em;
+	background: #fff url('images/x2.gif') top left repeat-x;
+}
+
+#content h1 {
+	color: #333;
+}
+
+#content h2 span,#content h3 span {
+	position: absolute;
+	top: 0em;
+	right: 0em;
+	background: #fff url('images/x1.gif') top right no-repeat;
+	width: 16px;
+	height: 28px;
+}
+
+#content ul,#content ol {
+	margin-bottom: 1.5em;
+	padding-left: 3em;
+}
+
+#content blockquote {
+	border: dashed 1px #BFB793;
+	background: #FFFEFB url('images/x5.gif') top left repeat-x;
+	padding: 1em;
+	margin-bottom: 1.5em;
+}
+
+#content blockquote p {
+	margin-bottom: 0em;
+}
+
+#content table {
+	margin-bottom: 1.5em;
+}
+
+#content table th {
+	text-align: left;
+	font-weight: bold;
+	padding: 0.5em;
+}
+
+#content table td {
+	padding: 0.5em;
+}
+
+#content table tr.rowA {
+	background: #FDFEFE url('images/x6.gif') top left repeat-x;
+	color: inherit;
+}
+
+#content table tr.rowB {
+	background: #FFFEFC url('images/x7.gif') top left repeat-x;
+	color: inherit;
+}
+
+/* Primary Content */
+#primaryContentContainer {
+	position: relative;
+	float: left;
+	margin-right: -36em;
+	width: 100%;
+}
+
+#primaryContent {
+	margin: 0em 0em 0em 0em;
+	padding: 1em .5em 1em .5em;
+}
+
+/* Secondary Content */
+#secondaryContent {
+	position: relative;
+	float: right;
+	width: 12em;
+	padding: 1.5em;
+	margin-right: 1em;
+}
+
+/* Tertiary Content */
+#tertiaryContent {
+	position: relative;
+	float: right;
+	width: 12em;
+	padding: 1.5em;
+}
+
+/* Footer */
+#footer {
+	text-align: center;
+	padding: 1.5em;
+	background: #fff url('images/x2.gif') top left repeat-x;
+}
+
+span.shortcuts {
+	word-spacing: .5em;
+	font-weight: bold;
+}
+
+span.shortcuts img {
+	border: 0;
+	margin-bottom: 0;
+}
+
+div.resultinfo {
+	padding: 0.5em 0.2em 0.5em 0.2em;
+	font-size: 1.1em;
+}
+
+.snippet {
+	background: #EEE;
+	font-size: 12px;
+	border: 1px solid #AAA;
+	width: 600px;
+}
+
+.snippet .highlight {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 12px;
+	background: yellow;
+}
+
+#sidemenu {
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+#sidemenu ol {
+	padding-left: 2em;
+}
+
+#sidemenucats {
+	border-right: 1px solid #AAA;
+	padding: .5em;
+	margin-right: 0em;
+}
+
+#mainside {
+	vertical-align: top;
+}
+
+.currentcategory {
+	font-weight: bold;
+	font-style: italic;
+	color: #073C4C;
+}

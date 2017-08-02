@@ -1,0 +1,87 @@
+/* java formatting */
+
+.javadoc {
+	color: #191970;
+}
+
+.javadoc a {
+	color: #191970;
+}
+
+.javaMComment {
+	color: blue;
+}
+
+.javaMComment a {
+	color: blue;
+}
+
+.javaSComment {
+	color: #118F46;
+}
+
+.javaSComment a {
+	color: #118F46;
+}
+
+.javaKeyword {
+	font-weight: bold;
+	color: #8F1151;
+}
+
+.javaString {
+	font-weight: bold;
+	color: #4C2FBF;
+}
+
+.javaString a {
+	font-weight: bold;
+	color: #4C2FBF;
+}
+
+.javaChar {
+	color: #4C2FBF;
+}
+
+/* tag (html, jsp, xml) formatting */
+
+.tag {
+	font-weight: bold;
+	color: #118F46;
+}
+
+.cdata {
+	color: #3F5FBF;
+}
+
+.cdata a {
+	color: #3F5FBF;
+}
+
+.javacode {
+	color: #A0522D;
+}
+
+.javacode a {
+	color: #A0522D;
+}
+
+.attribute {
+	color: #8F1151;
+}
+
+.attribute a {
+	color: #8F1151;
+}
+
+.attributeValue {
+	color: #4C2FBF;
+}
+
+.attributeValue a {
+	color: #4C2FBF;
+}
+
+.comment {
+	color: #3F5FBF;
+}

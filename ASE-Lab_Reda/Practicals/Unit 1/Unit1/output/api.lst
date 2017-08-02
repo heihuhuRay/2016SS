@@ -1,0 +1,1350 @@
+                                  1 	#$$m2		- PowerPC mnemonics
+                                  2 	#$$pVLE		- PowerPC VLE encoding
+                                  3 	#$$oPPC5534  - Optimized for PPC5534
+                                  4 	#$$ko 9		- Reorder info
+                                  5 		.file		"api.c"
+                                  6 	#$$eb
+                                  7 	#$$sz 0
+                                  8 	#$$fp 0
+                                  9 		.section	.PPC.EMB.apuinfo,,@note
+  00000000 01  0000 0008         10 		.4byte		8
+  00000004 01  0000 0004         11 		.4byte		4
+  00000008 01  0000 0002         12 		.4byte		2
+  0000000c 01  4150 5569 6e66    13 		.byte		"APUinfo"
+  00000012 01  6f                   	
+  00000013 01  00                14 		.byte		0
+                                 15 		.align		2
+  00000014 01  0104 0001         16 		.4byte		0x01040001
+                                 17 		.section	.text_vle,,c
+                                 18 		.section	.debug_frame,,n
+                                 19 	__local_cie: 
+  00000000 02  0000 0010         20 		.word	.LE-.LS
+                                 21 	.LS:
+  00000004 02  ffff ffff         22 		.word	-1
+  00000008 02  01                23 		.byte	1
+  00000009 02  00                24 		.byte	0
+  0000000a 02  04                25 		.uleb128	4
+  0000000b 02  7c                26 		.sleb128	-4
+  0000000c 02  6c                27 		.byte	108
+  0000000d 02  0c                28 		.byte	0x0c
+  0000000e 02  01                29 		.byte	1
+  0000000f 02  00                30 		.byte	0
+  00000010 02  08                31 		.byte	8
+  00000011 02  6c                32 		.byte	108
+                                 33 		.fill           (.LS-.)&3
+                                 34 	.LE:
+                                 35 		.section	.debug_line,,n
+                                 36 	.L8:
+                                 37 		.section	.text_vle,,c
+                                 38 	.L4:
+  00000000 00                    39 		.0byte		.L2
+  00000000 03  0000 0103 0002    40 		.d2_line_start	.debug_line
+  00000006 03  0000 0013 0201       	
+  0000000c 03  ff04 0d00 0101       	
+  00000012 03  0101 0000 0001       	
+  00000018 03  0000 0100 00         	
+                                 41 		.section	.debug_abbrev,,n
+                                 42 	.L9:
+                                 43 		.section	.debug_info,,n
+                                 44 	.L2:
+  00000000 05  0000 016d         45 		.4byte		.L3-.L1
+                                 46 	.L1:
+  00000004 05  0002              47 		.2byte		0x2
+  00000006 05  0000 0000         48 		.4byte		.L9
+  0000000a 05  04                49 		.byte		0x4
+                                 50 		.section	.debug_abbrev,,n
+  00000000 04  01                51 		.uleb128	1
+  00000001 04  11                52 		.uleb128	17
+  00000002 04  01                53 		.byte		0x1
+  00000003 04  01                54 		.uleb128	1
+  00000004 04  13                55 		.uleb128	19
+  00000005 04  03                56 		.uleb128	3
+  00000006 04  08                57 		.uleb128	8
+  00000007 04  25                58 		.uleb128	37
+  00000008 04  08                59 		.uleb128	8
+  00000009 04  1b                60 		.uleb128	27
+  0000000a 04  08                61 		.uleb128	8
+  0000000b 04  13                62 		.uleb128	19
+  0000000c 04  0f                63 		.uleb128	15
+  0000000d 04  11                64 		.uleb128	17
+  0000000e 04  01                65 		.uleb128	1
+  0000000f 04  12                66 		.uleb128	18
+  00000010 04  01                67 		.uleb128	1
+  00000011 04  10                68 		.uleb128	16
+  00000012 04  06                69 		.uleb128	6
+  00000013 04  00                70 		.uleb128	0
+  00000014 04  00                71 		.uleb128	0
+                                 72 		.section	.debug_info,,n
+  0000000b 05  01                73 		.sleb128	1
+  0000000c 05  0000 0170         74 		.4byte		.L7-.L2
+  00000010 05  433a 5c55 7365    75 		.byte		"C:\\Users\\kucha\\Downloads\\Unit1\\src\\api.c"
+  00000016 05  7273 5c6b 7563       	
+  0000001c 05  6861 5c44 6f77       	
+  00000022 05  6e6c 6f61 6473       	
+  00000028 05  5c55 6e69 7431       	
+  0000002e 05  5c73                 	
+  00000038 05  00                76 		.byte		0
+  00000039 05  4469 6162 2044    77 		.byte		"Diab Data, Inc:dcc Rel 5.7.0.0:PPC5534"
+  0000003f 05  6174 612c 2049       	
+  00000045 05  6e63 3a64 6363       	
+  0000004b 05  2052 656c 2035       	
+  00000051 05  2e37 2e30 2e30       	
+  00000057 05  3a50                 	
+  0000005f 05  00                78 		.byte		0
+  00000060 05  433a 5c55 7365    79 		.byte		"C:\\Users\\kucha\\Downloads\\Unit1"
+  00000066 05  7273 5c6b 7563       	
+  0000006c 05  6861 5c44 6f77       	
+  00000072 05  6e6c 6f61 6473       	
+  00000078 05  5c55 6e69 7431       	
+  0000007e 05  00                80 		.byte		0
+  0000007f 05  01                81 		.uleb128	1
+  00000080 05  0000 0000         82 		.4byte		.L4
+  00000084 05  0000 0000         83 		.4byte		.L5
+  00000088 05  0000 0000         84 		.4byte		.L8
+                                 85 		.section	.text_vle,,c
+                                 86 	
+                                 87 	#$$bf
+                                 88 		.align		2
+                                 89 		.globl		init_mode
+  00000014 02  0000 000c 0000    90 		.d2_cfa_start __local_cie
+  0000001a 02  0000 0000 0000       	
+  00000020 02  0000 00f6            	
+                                 91 	init_mode:
+                                 92 		.section	.debug_abbrev,,n
+  00000015 04  02                93 		.uleb128	2
+  00000016 04  2e                94 		.uleb128	46
+  00000017 04  01                95 		.byte		0x1
+  00000018 04  01                96 		.uleb128	1
+  00000019 04  13                97 		.uleb128	19
+  0000001a 04  03                98 		.uleb128	3
+  0000001b 04  08                99 		.uleb128	8
+  0000001c 04  3a               100 		.uleb128	58
+  0000001d 04  06               101 		.uleb128	6
+  0000001e 04  3b               102 		.uleb128	59
+  0000001f 04  0f               103 		.uleb128	15
+  00000020 04  3f               104 		.uleb128	63
+  00000021 04  0c               105 		.uleb128	12
+  00000022 04  27               106 		.uleb128	39
+  00000023 04  0c               107 		.uleb128	12
+  00000024 04  11               108 		.uleb128	17
+  00000025 04  01               109 		.uleb128	1
+  00000026 04  12               110 		.uleb128	18
+  00000027 04  01               111 		.uleb128	1
+  00000028 04  00               112 		.uleb128	0
+  00000029 04  00               113 		.uleb128	0
+                                114 		.section	.debug_info,,n
+                                115 	.L5792:
+  0000008c 05  02               116 		.sleb128	2
+  0000008d 05  0000 00ab        117 		.4byte		.L5788-.L2
+  00000091 05  696e 6974 5f6d   118 		.byte		"init_mode"
+  00000097 05  6f64 65              	
+  0000009a 05  00               119 		.byte		0
+  0000009b 05  0000 0001        120 		.4byte		.L5791
+  0000009f 05  38               121 		.uleb128	56
+  000000a0 05  01               122 		.byte		0x1
+  000000a1 05  01               123 		.byte		0x1
+  000000a2 05  0000 0000        124 		.4byte		.L5789
+  000000a6 05  0000 0000        125 		.4byte		.L5790
+                                126 		.section	.text_vle,,c
+  0000001d 03  0033 0343 3a5c   127 		.d2file		"C:\\Users\\kucha\\Downloads\\Unit1\\src\\api.c"
+  00000023 03  5c55 7365 7273       	
+  00000029 03  5c5c 6b75 6368       	
+  0000002f 03  615c 5c44 6f77       	
+  00000035 03  6e6c 6f61 6473       	
+  0000003b 03  5c5c                 	
+  00000054 03  0005 0200 0000   128 	        .d2line         57
+  0000005a 03  0003 380e            	
+                                129 	.L5789:
+                                130 	#$$ee
+  0000005e 03  0200 0a          131 		.d2prologue_end
+  00000000 00  7078 e3fd        132 		e_lis		r3,50173
+  00000004 00  7078 c008        133 		e_or2i		r3,49160
+  00000061 03  20               134 	        .d2line         59
+  00000008 00  c063             135 		se_lwz		r6,0(r3)
+                                136 	#$$vo
+  0000000a 00  18c6 d010        137 		e_ori		r6,r6,16
+  0000000e 00  d063             138 		se_stw		r6,0(r3)
+                                139 	#$$vo
+  00000062 03  1f               140 	        .d2line         60
+  00000010 00  c073             141 		se_lwz		r7,0(r3)
+                                142 	#$$vo
+  00000012 00  18e7 d020        143 		e_ori		r7,r7,32
+  00000016 00  d073             144 		se_stw		r7,0(r3)
+                                145 	#$$vo
+  00000018 00  7078 e3fd        146 		e_lis		r3,50173
+  0000001c 00  7078 c02c        147 		e_or2i		r3,49196
+  00000063 03  30               148 	        .d2line         62
+  00000020 00  c073             149 		se_lwz		r7,0(r3)
+                                150 	#$$vo
+  00000022 00  18e7 d20c        151 		e_ori		r7,r7,786432
+  00000026 00  d073             152 		se_stw		r7,0(r3)
+                                153 	#$$vo
+  00000064 03  1f               154 	        .d2line         63
+  00000028 00  c063             155 		se_lwz		r6,0(r3)
+                                156 	#$$vo
+  0000002a 00  18c6 d203        157 		e_ori		r6,r6,196608
+  0000002e 00  d063             158 		se_stw		r6,0(r3)
+                                159 	#$$vo
+  00000065 03  1f               160 	        .d2line         64
+  00000030 00  c073             161 		se_lwz		r7,0(r3)
+                                162 	#$$vo
+  00000032 00  18e7 d020        163 		e_ori		r7,r7,32
+  00000036 00  d073             164 		se_stw		r7,0(r3)
+                                165 	#$$vo
+  00000066 03  1f               166 	        .d2line         65
+  00000038 00  c063             167 		se_lwz		r6,0(r3)
+                                168 	#$$vo
+  0000003a 00  74c6 0037        169 		e_rlwinm		r6,r6,0,0,27
+  0000003e 00  18c6 d002        170 		e_ori		r6,r6,2
+  00000042 00  d063             171 		se_stw		r6,0(r3)
+                                172 	#$$vo
+  00000044 00  7078 e3fd        173 		e_lis		r3,50173
+  00000048 00  7078 c034        174 		e_or2i		r3,49204
+  00000067 03  38               175 	        .d2line         67
+  0000004c 00  c063             176 		se_lwz		r6,0(r3)
+                                177 	#$$vo
+  0000004e 00  18c6 d020        178 		e_ori		r6,r6,32
+  00000052 00  d063             179 		se_stw		r6,0(r3)
+                                180 	#$$vo
+  00000068 03  1f               181 	        .d2line         68
+  00000054 00  c073             182 		se_lwz		r7,0(r3)
+                                183 	#$$vo
+  00000056 00  74e7 0037        184 		e_rlwinm		r7,r7,0,0,27
+  0000005a 00  18e7 d002        185 		e_ori		r7,r7,2
+  0000005e 00  d073             186 		se_stw		r7,0(r3)
+                                187 	#$$vo
+  00000060 00  7078 e3fd        188 		e_lis		r3,50173
+  00000064 00  7078 c030        189 		e_or2i		r3,49200
+  00000069 03  38               190 	        .d2line         70
+  00000068 00  c073             191 		se_lwz		r7,0(r3)
+                                192 	#$$vo
+  0000006a 00  6087             193 		se_bclri		r7,8
+  0000006c 00  d073             194 		se_stw		r7,0(r3)
+                                195 	#$$vo
+  0000006a 03  1b               196 	        .d2line         71
+  0000006e 00  c063             197 		se_lwz		r6,0(r3)
+                                198 	#$$vo
+  00000070 00  18c6 d20c        199 		e_ori		r6,r6,786432
+  00000074 00  d063             200 		se_stw		r6,0(r3)
+                                201 	#$$vo
+  0000006b 03  1f               202 	        .d2line         72
+  00000076 00  c073             203 		se_lwz		r7,0(r3)
+                                204 	#$$vo
+  00000078 00  18e7 d203        205 		e_ori		r7,r7,196608
+  0000007c 00  d073             206 		se_stw		r7,0(r3)
+                                207 	#$$vo
+  0000006c 03  1f               208 	        .d2line         73
+  0000007e 00  c063             209 		se_lwz		r6,0(r3)
+                                210 	#$$vo
+  00000080 00  61a6             211 		se_bclri		r6,26
+  00000082 00  d063             212 		se_stw		r6,0(r3)
+                                213 	#$$vo
+  0000006d 03  1c               214 	        .d2line         75
+  00000084 00  c073             215 		se_lwz		r7,0(r3)
+                                216 	#$$vo
+  00000086 00  74e7 0037        217 		e_rlwinm		r7,r7,0,0,27
+  0000008a 00  18e7 d002        218 		e_ori		r7,r7,2
+  0000008e 00  d073             219 		se_stw		r7,0(r3)
+                                220 	#$$vo
+  00000090 00  7078 e3fd        221 		e_lis		r3,50173
+  00000094 00  7078 c010        222 		e_or2i		r3,49168
+  0000006e 03  38               223 	        .d2line         77
+  00000098 00  c073             224 		se_lwz		r7,0(r3)
+                                225 	#$$vo
+  0000009a 00  18e7 d008        226 		e_ori		r7,r7,8
+  0000009e 00  d073             227 		se_stw		r7,0(r3)
+                                228 	#$$vo
+  0000006f 03  1f               229 	        .d2line         78
+  000000a0 00  c063             230 		se_lwz		r6,0(r3)
+                                231 	#$$vo
+  000000a2 00  18c6 d004        232 		e_ori		r6,r6,4
+  000000a6 00  d063             233 		se_stw		r6,0(r3)
+                                234 	#$$vo
+  00000070 03  1f               235 	        .d2line         79
+  000000a8 00  c073             236 		se_lwz		r7,0(r3)
+                                237 	#$$vo
+  000000aa 00  18e7 d002        238 		e_ori		r7,r7,2
+  000000ae 00  d073             239 		se_stw		r7,0(r3)
+                                240 	#$$vo
+  00000071 03  1f               241 	        .d2line         80
+  000000b0 00  c063             242 		se_lwz		r6,0(r3)
+                                243 	#$$vo
+  000000b2 00  18c6 d001        244 		e_ori		r6,r6,1
+  000000b6 00  d063             245 		se_stw		r6,0(r3)
+                                246 	#$$vo
+  00000072 03  0303 1e          247 	        .d2line         83
+  000000b8 00  70f8 e3fe        248 		e_lis		r7,-15362
+  000000bc 00  70c0 00fe        249 		e_li		r6,254
+  000000c0 00  54c7 c080        250 		e_stw		r6,-16256(r7)
+                                251 	#$$vo
+  000000c4 00  7078 e3fd        252 		e_lis		r3,50173
+  000000c8 00  7078 c0a0        253 		e_or2i		r3,49312
+  00000075 03  37               254 	        .d2line         84
+  000000cc 00  c063             255 		se_lwz		r6,0(r3)
+                                256 	#$$vo
+  000000ce 00  18c6 d104        257 		e_ori		r6,r6,1024
+  000000d2 00  d063             258 		se_stw		r6,0(r3)
+                                259 	#$$vo
+  00000076 03  1f               260 	        .d2line         85
+  000000d4 00  c073             261 		se_lwz		r7,0(r3)
+                                262 	#$$vo
+  000000d6 00  18e7 d101        263 		e_ori		r7,r7,256
+  000000da 00  d073             264 		se_stw		r7,0(r3)
+                                265 	#$$vo
+  000000dc 00  7078 e3fd        266 		e_lis		r3,50173
+  000000e0 00  7078 c004        267 		e_or2i		r3,49156
+  00000077 03  2f               268 	        .d2line         86
+  000000e4 00  6217             269 		se_geni		r7,1
+  000000e6 00  70eb c2f0        270 		e_or2i		r7,23280
+  000000ea 00  d073             271 		se_stw		r7,0(r3)
+                                272 	#$$vo
+  00000078 03  1f               273 	        .d2line         87
+  000000ec 00  6216             274 		se_geni		r6,1
+  000000ee 00  70d4 c50f        275 		e_or2i		r6,42255
+  000000f2 00  d063             276 		se_stw		r6,0(r3)
+                                277 	#$$vo
+  00000079 03  0305 1e          278 	        .d2line         92
+                                279 	#$$be
+  0000007c 03  0200 0b01        280 		.d2epilogue_begin
+                                281 	#$$tl 0x0 0x0 0x0
+  000000f4 00  0004             282 		se_blr
+                                283 	#$$ef
+                                284 		.d2_cfa_end 2
+                                285 		.section	.debug_info,,n
+  000000aa 05  00               286 		.sleb128	0
+                                287 	.L5788:
+                                288 		.section	.text_vle,,c
+                                289 	.L5790:
+                                290 		.type		init_mode,@function
+                                291 		.size		init_mode,.-init_mode
+                                292 	# Number of nodes = 107
+                                293 	
+                                294 	# Allocations for init_mode
+                                295 	#	not allocated	$$1
+                                296 	#	not allocated	$$2
+                                297 	#	not allocated	$$3
+                                298 	#	not allocated	$$4
+                                299 	#	not allocated	$$5
+                                300 	#	not allocated	$$6
+                                301 	#	not allocated	$$7
+                                302 	#	not allocated	$$8
+                                303 	#	not allocated	$$9
+                                304 	#	not allocated	$$10
+                                305 	#	not allocated	$$11
+                                306 	#	not allocated	$$12
+                                307 	#	not allocated	$$13
+                                308 	#	not allocated	$$14
+                                309 	#	not allocated	$$15
+                                310 	#	not allocated	$$16
+                                311 	#	not allocated	$$17
+                                312 	#	not allocated	$$18
+                                313 	#	not allocated	$$19
+                                314 	#	not allocated	$$20
+                                315 	#	not allocated	$$21
+                                316 	#	not allocated	$$22
+                                317 	#	not allocated	$$23
+                                318 	#	not allocated	$$24
+                                319 	#	not allocated	$$25
+                                320 	#	not allocated	$$26
+                                321 	#	not allocated	$$27
+                                322 	#	not allocated	$$28
+                                323 	#	not allocated	$$29
+                                324 	#	not allocated	$$30
+                                325 	#	not allocated	$$31
+                                326 	#	not allocated	$$32
+                                327 	#	not allocated	$$33
+                                328 	#	not allocated	$$34
+                                329 	#	not allocated	$$35
+                                330 	#	not allocated	$$36
+                                331 	#	not allocated	$$37
+                                332 	#	not allocated	$$38
+                                333 	#	not allocated	$$39
+                                334 	#	not allocated	$$40
+                                335 	#	not allocated	$$41
+                                336 	#	not allocated	$$42
+                                337 	#	r3		$$43
+                                338 	#	r3		$$44
+                                339 	#	r3		$$45
+                                340 	#	r3		$$46
+                                341 	#	r3		$$47
+                                342 	#	r3		$$48
+                                343 	#	r3		$$49
+                                344 	
+                                345 	#$$bf
+                                346 		.align		2
+                                347 		.globl		init_timer
+  00000024 02  0000 000c 0000   348 		.d2_cfa_start __local_cie
+  0000002a 02  0000 0000 0000       	
+  00000030 02  0000 0012            	
+                                349 	init_timer:
+                                350 		.section	.debug_info,,n
+                                351 	.L5797:
+  000000ab 05  02               352 		.sleb128	2
+  000000ac 05  0000 00cb        353 		.4byte		.L5794-.L2
+  000000b0 05  696e 6974 5f74   354 		.byte		"init_timer"
+  000000b6 05  696d 6572            	
+  000000ba 05  00               355 		.byte		0
+  000000bb 05  0000 0001        356 		.4byte		.L5791
+  000000bf 05  5f               357 		.uleb128	95
+  000000c0 05  01               358 		.byte		0x1
+  000000c1 05  01               359 		.byte		0x1
+  000000c2 05  0000 0000        360 		.4byte		.L5795
+  000000c6 05  0000 0000        361 		.4byte		.L5796
+                                362 		.section	.text_vle,,c
+  00000080 03  0304 16          363 	        .d2line         96
+                                364 	.L5795:
+                                365 	#$$ee
+  00000083 03  0200 0a          366 		.d2prologue_end
+  000000f8 00  7078 e3ff        367 		e_lis		r3,50175
+  00000086 03  17               368 	        .d2line         97
+  000000fc 00  c063             369 		se_lwz		r6,0(r3)
+                                370 	#$$vo
+  000000fe 00  61e6             371 		se_bclri		r6,30
+  00000100 00  d063             372 		se_stw		r6,0(r3)
+                                373 	#$$vo
+  00000087 03  1b               374 	        .d2line         98
+  00000102 00  c073             375 		se_lwz		r7,0(r3)
+                                376 	#$$vo
+  00000104 00  61f7             377 		se_bclri		r7,31
+  00000106 00  d073             378 		se_stw		r7,0(r3)
+                                379 	#$$vo
+  00000088 03  0303 1a          380 	        .d2line         101
+                                381 	#$$be
+  0000008b 03  0200 0b01        382 		.d2epilogue_begin
+                                383 	#$$tl 0x0 0x0 0x0
+  00000108 00  0004             384 		se_blr
+                                385 	#$$ef
+                                386 		.d2_cfa_end 2
+                                387 		.section	.debug_info,,n
+  000000ca 05  00               388 		.sleb128	0
+                                389 	.L5794:
+                                390 		.section	.text_vle,,c
+                                391 	.L5796:
+                                392 		.type		init_timer,@function
+                                393 		.size		init_timer,.-init_timer
+                                394 	# Number of nodes = 10
+                                395 	
+                                396 	# Allocations for init_timer
+                                397 	#	not allocated	$$50
+                                398 	#	not allocated	$$51
+                                399 	#	not allocated	$$52
+                                400 	#	not allocated	$$53
+                                401 	#	r3		$$54
+                                402 	
+                                403 	#$$bf
+                                404 		.align		2
+                                405 		.globl		conf_timer0
+  00000034 02  0000 000c 0000   406 		.d2_cfa_start __local_cie
+  0000003a 02  0000 0000 0000       	
+  00000040 02  0000 003c            	
+                                407 	conf_timer0:
+                                408 		.section	.debug_info,,n
+                                409 	.L5802:
+  000000cb 05  02               410 		.sleb128	2
+  000000cc 05  0000 0110        411 		.4byte		.L5799-.L2
+  000000d0 05  636f 6e66 5f74   412 		.byte		"conf_timer0"
+  000000d6 05  696d 6572 30         	
+  000000db 05  00               413 		.byte		0
+  000000dc 05  0000 0001        414 		.4byte		.L5791
+  000000e0 05  67               415 		.uleb128	103
+  000000e1 05  01               416 		.byte		0x1
+  000000e2 05  01               417 		.byte		0x1
+  000000e3 05  0000 0000        418 		.4byte		.L5800
+  000000e7 05  0000 0000        419 		.4byte		.L5801
+                                420 		.section	.debug_abbrev,,n
+  0000002a 04  03               421 		.uleb128	3
+  0000002b 04  05               422 		.uleb128	5
+  0000002c 04  00               423 		.byte		0x0
+  0000002d 04  3a               424 		.uleb128	58
+  0000002e 04  06               425 		.uleb128	6
+  0000002f 04  3b               426 		.uleb128	59
+  00000030 04  0f               427 		.uleb128	15
+  00000031 04  03               428 		.uleb128	3
+  00000032 04  08               429 		.uleb128	8
+  00000033 04  49               430 		.uleb128	73
+  00000034 04  10               431 		.uleb128	16
+  00000035 04  02               432 		.uleb128	2
+  00000036 04  09               433 		.uleb128	9
+  00000037 04  00               434 		.uleb128	0
+  00000038 04  00               435 		.uleb128	0
+                                436 		.section	.debug_info,,n
+                                437 	.L5803:
+  000000eb 05  03               438 		.sleb128	3
+  000000ec 05  0000 0001        439 		.4byte		.L5791
+  000000f0 05  67               440 		.uleb128	103
+  000000f1 05  6d6f 6465        441 		.byte		"mode"
+  000000f5 05  00               442 		.byte		0
+  000000f6 05  0000 0000        443 		.4byte		.L5804
+  000000fa 05  02               444 		.sleb128	2
+  000000fb 05  90               445 		.byte		0x90
+  000000fc 05  03               446 		.uleb128	3
+                                447 	.L5805:
+  000000fd 05  03               448 		.sleb128	3
+  000000fe 05  0000 0001        449 		.4byte		.L5791
+  00000102 05  67               450 		.uleb128	103
+  00000103 05  7469 6d65        451 		.byte		"time"
+  00000107 05  00               452 		.byte		0
+  00000108 05  0000 0000        453 		.4byte		.L5804
+  0000010c 05  02               454 		.sleb128	2
+  0000010d 05  90               455 		.byte		0x90
+  0000010e 05  04               456 		.uleb128	4
+                                457 		.section	.text_vle,,c
+  0000008f 03  0303 16          458 	        .d2line         104
+                                459 	.L5800:
+                                460 	#$$ee
+  00000092 03  0200 0a          461 		.d2prologue_end
+  00000095 03  10               462 	        .d2line         106
+  0000010c 00  70f8 e3ff        463 		e_lis		r7,-15361
+  00000110 00  0146             464 		se_mr		r6,r4
+  00000112 00  70e6 a680        465 		e_mull2i		r6,16000
+  00000116 00  54c7 0100        466 		e_stw		r6,256(r7)
+                                467 	#$$vo
+  0000011a 00  7098 e3ff        468 		e_lis		r4,50175
+  0000011e 00  7080 c108        469 		e_or2i		r4,264
+  00000096 03  3b               470 	        .d2line         107
+  00000122 00  c064             471 		se_lwz		r6,0(r4)
+                                472 	#$$vo
+  00000124 00  18c6 d002        473 		e_ori		r6,r6,2
+  00000128 00  d064             474 		se_stw		r6,0(r4)
+                                475 	#$$vo
+  00000097 03  1f               476 	        .d2line         108
+  0000012a 00  c074             477 		se_lwz		r7,0(r4)
+  0000012c 00  7466 07ff        478 		e_rlwinm		r6,r3,0,31,31
+                                479 	#$$vo
+  00000130 00  61f7             480 		se_bclri		r7,31
+  00000132 00  4467             481 		se_or		r7,r6
+  00000134 00  d074             482 		se_stw		r7,0(r4)
+                                483 	#$$vo
+  00000136 00  7078 e3ff        484 		e_lis		r3,50175
+  0000013a 00  7060 c10c        485 		e_or2i		r3,268
+  00000098 03  38               486 	        .d2line         110
+  0000013e 00  c063             487 		se_lwz		r6,0(r3)
+                                488 	#$$vo
+  00000140 00  18c6 d001        489 		e_ori		r6,r6,1
+  00000144 00  d063             490 		se_stw		r6,0(r3)
+                                491 	#$$vo
+  00000099 03  0303 1e          492 	        .d2line         113
+                                493 	#$$be
+  0000009c 03  0200 0b01        494 		.d2epilogue_begin
+                                495 	#$$tl 0x0 0x0 0x0
+  00000146 00  0004             496 		se_blr
+                                497 	#$$ef
+                                498 		.d2_cfa_end 2
+                                499 		.section	.debug_info,,n
+  0000010f 05  00               500 		.sleb128	0
+                                501 	.L5799:
+                                502 		.section	.text_vle,,c
+                                503 	.L5801:
+                                504 		.type		conf_timer0,@function
+                                505 		.size		conf_timer0,.-conf_timer0
+                                506 	# Number of nodes = 21
+                                507 	
+                                508 	# Allocations for conf_timer0
+                                509 	#	r3		mode
+                                510 	#	r4		time
+                                511 	#	not allocated	$$55
+                                512 	#	not allocated	$$56
+                                513 	#	not allocated	$$57
+                                514 	#	not allocated	$$58
+                                515 	#	not allocated	$$59
+                                516 	#	not allocated	$$60
+                                517 	#	not allocated	$$61
+                                518 	#	not allocated	$$62
+                                519 	#	not allocated	$$63
+                                520 	#	r4		$$64
+                                521 	#	r3		$$65
+                                522 	
+                                523 	#$$bf
+                                524 		.align		2
+                                525 		.globl		init_peripherals
+  00000044 02  0000 0014 0000   526 		.d2_cfa_start __local_cie
+  0000004a 02  0000 0000 0000       	
+  00000050 02  0000 00ca            	
+                                527 	init_peripherals:
+                                528 		.section	.debug_info,,n
+                                529 	.L5810:
+  00000110 05  02               530 		.sleb128	2
+  00000111 05  0000 0136        531 		.4byte		.L5807-.L2
+  00000115 05  696e 6974 5f70   532 		.byte		"init_peripherals"
+  0000011b 05  6572 6970 6865       	
+  00000121 05  7261 6c73            	
+  00000125 05  00               533 		.byte		0
+  00000126 05  0000 0001        534 		.4byte		.L5791
+  0000012a 05  75               535 		.uleb128	117
+  0000012b 05  01               536 		.byte		0x1
+  0000012c 05  01               537 		.byte		0x1
+  0000012d 05  0000 0000        538 		.4byte		.L5808
+  00000131 05  0000 0000        539 		.4byte		.L5809
+                                540 		.section	.text_vle,,c
+  000000a0 03  0305 12          541 	        .d2line         118
+                                542 	.L5808:
+  00000148 00  1821 06f0        543 		e_stwu		r1,-16(r1)
+  00000054 02  410e 10          544 		.d2_cfa_def_cfa_offset	16
+  0000014c 00  0080             545 		se_mflr		r0,lr
+  0000014e 00  d501             546 		se_stw		r0,20(r1)
+  00000057 02  4111 6c7f        547 		.d2_cfa_offset    108,-1
+                                548 	#$$ee
+  000000a3 03  0204 0a          549 		.d2prologue_end
+  00000150 00  4803             550 		se_li		r3,0
+  000000a6 03  14               551 	        .d2line         120
+  00000152 00  70d8 e3fe        552 		e_lis		r6,-15362
+  00000156 00  3466 c0e0        553 		e_stb		r3,-16160(r6)
+                                554 	#$$vo
+  000000a7 03  0303 1e          555 	        .d2line         123
+  0000015a 00  3466 c11c        556 		e_stb		r3,-16100(r6)
+                                557 	#$$vo
+  000000aa 03  18               558 	        .d2line         125
+  0000015e 00  3466 c0d0        559 		e_stb		r3,-16176(r6)
+                                560 	#$$vo
+  00000162 00  7078 e3f9 7060   561 		e_lis		r3,-15367	; e_or2i	r3,r3,196
+  00000168 00  c0c4                 	
+  000000ab 03  0304 26          562 	        .d2line         129
+  0000016a 00  a063             563 		se_lhz		r6,0(r3)
+                                564 	#$$vo
+  0000016c 00  74c6 05a7        565 		e_rlwinm		r6,r6,0,22,19
+  00000170 00  18c6 d104        566 		e_ori		r6,r6,1024
+  00000174 00  b063             567 		se_sth		r6,0(r3)
+                                568 	#$$vo
+  000000ae 03  27               569 	        .d2line         130
+  00000176 00  a073             570 		se_lhz		r7,0(r3)
+                                571 	#$$vo
+  00000178 00  18e7 d120        572 		e_ori		r7,r7,8192
+  0000017c 00  b073             573 		se_sth		r7,0(r3)
+                                574 	#$$vo
+  000000af 03  1f               575 	        .d2line         131
+  0000017e 00  a063             576 		se_lhz		r6,0(r3)
+                                577 	#$$vo
+  00000180 00  18c6 d101        578 		e_ori		r6,r6,256
+  00000184 00  b063             579 		se_sth		r6,0(r3)
+                                580 	#$$vo
+  00000186 00  7078 e3f9 7060   581 		e_lis		r3,-15367	; e_or2i	r3,r3,132
+  0000018c 00  c084                 	
+  000000b0 03  0308 2e          582 	        .d2line         139
+  0000018e 00  a063             583 		se_lhz		r6,0(r3)
+                                584 	#$$vo
+  00000190 00  74c6 05a7        585 		e_rlwinm		r6,r6,0,22,19
+  00000194 00  18c6 d104        586 		e_ori		r6,r6,1024
+  00000198 00  b063             587 		se_sth		r6,0(r3)
+                                588 	#$$vo
+  000000b3 03  27               589 	        .d2line         140
+  0000019a 00  a073             590 		se_lhz		r7,0(r3)
+                                591 	#$$vo
+  0000019c 00  18e7 d120        592 		e_ori		r7,r7,8192
+  000001a0 00  b073             593 		se_sth		r7,0(r3)
+                                594 	#$$vo
+  000000b4 03  1f               595 	        .d2line         141
+  000001a2 00  a063             596 		se_lhz		r6,0(r3)
+                                597 	#$$vo
+  000001a4 00  18c6 d101        598 		e_ori		r6,r6,256
+  000001a8 00  b063             599 		se_sth		r6,0(r3)
+                                600 	#$$vo
+  000001aa 00  707f e7e0        601 		e_lis		r3,65504
+  000000b5 03  0303 26          602 	        .d2line         144
+  000001ae 00  c063             603 		se_lwz		r6,0(r3)
+                                604 	#$$vo
+  000001b0 00  18c6 d320        605 		e_ori		r6,r6,536870912
+  000001b4 00  d063             606 		se_stw		r6,0(r3)
+                                607 	#$$vo
+  000000b8 03  0303 1e          608 	        .d2line         147
+  000001b6 00  c073             609 		se_lwz		r7,0(r3)
+                                610 	#$$vo
+  000001b8 00  61f7             611 		se_bclri		r7,31
+  000001ba 00  d073             612 		se_stw		r7,0(r3)
+                                613 	#$$vo
+  000000bb 03  0303 1a          614 	        .d2line         150
+  000001bc 00  c063             615 		se_lwz		r6,0(r3)
+                                616 	#$$vo
+  000001be 00  18c6 d380        617 		e_ori		r6,r6,-2147483648
+  000001c2 00  d063             618 		se_stw		r6,0(r3)
+                                619 	#$$vo
+  000001c4 00  707f e7e0 7060   620 		e_lis		r3,-32	; e_or2i	r3,r3,164
+  000001ca 00  c0a4                 	
+  000000be 03  0304 2e          621 	        .d2line         154
+  000001cc 00  c063             622 		se_lwz		r6,0(r3)
+                                623 	#$$vo
+  000001ce 00  18c6 d010        624 		e_ori		r6,r6,16
+  000001d2 00  d063             625 		se_stw		r6,0(r3)
+                                626 	#$$vo
+  000000c1 03  20               627 	        .d2line         156
+  000001d4 00  c073             628 		se_lwz		r7,0(r3)
+                                629 	#$$vo
+  000001d6 00  18e7 d004        630 		e_ori		r7,r7,4
+  000001da 00  d073             631 		se_stw		r7,0(r3)
+                                632 	#$$vo
+  000000c2 03  0308 1e          633 	        .d2line         164
+                                634 	#$$fn 0x1ff8 0 0 0x1
+                                635 	#$$tl 0x0 0x0 0x0
+                                636 	#$$rs 0
+  000001dc 00  7800 0001        637 		bl		configure_io
+  000001e0 00  4813             638 		se_li		r3,1
+  000000c5 03  0303 1a          639 	        .d2line         167
+  000001e2 00  70f8 e3f9        640 		e_lis		r7,-15367
+  000001e6 00  3467 0609        641 		e_stb		r3,1545(r7)
+                                642 	#$$vo
+  000000c8 03  1f               643 	        .d2line         168
+  000001ea 00  3467 062a        644 		e_stb		r3,1578(r7)
+                                645 	#$$vo
+  000000c9 03  17               646 	        .d2line         169
+  000001ee 00  3467 060d        647 		e_stb		r3,1549(r7)
+                                648 	#$$vo
+  000000ca 03  17               649 	        .d2line         170
+  000001f2 00  3467 060c        650 		e_stb		r3,1548(r7)
+                                651 	#$$vo
+  000000cb 03  17               652 	        .d2line         171
+  000001f6 00  3467 063e        653 		e_stb		r3,1598(r7)
+                                654 	#$$vo
+  000000cc 03  17               655 	        .d2line         172
+  000001fa 00  3467 063d        656 		e_stb		r3,1597(r7)
+                                657 	#$$vo
+  000000cd 03  17               658 	        .d2line         173
+  000001fe 00  3467 063b        659 		e_stb		r3,1595(r7)
+                                660 	#$$vo
+  000000ce 03  17               661 	        .d2line         174
+  00000202 00  3467 060b        662 		e_stb		r3,1547(r7)
+                                663 	#$$vo
+  000000cf 03  18               664 	        .d2line         176
+  00000206 00  7c00 8146        665 		wrteei		1
+  000000d0 03  18               666 	        .d2line         178
+                                667 	#$$be
+  000000d1 03  0200 0b01        668 		.d2epilogue_begin
+  0000020a 00  c501             669 		se_lwz		r0,20(r1)
+  0000020c 00  0090             670 		se_mtlr		r0
+  0000020e 00  20f1             671 		se_addi		r1,16
+                                672 	#$$tl 0x0 0x0 0x0
+  00000210 00  0004             673 		se_blr
+                                674 	#$$ef
+                                675 		.d2_cfa_end 2
+                                676 		.section	.debug_info,,n
+  00000135 05  00               677 		.sleb128	0
+                                678 	.L5807:
+                                679 		.section	.text_vle,,c
+                                680 	.L5809:
+                                681 		.type		init_peripherals,@function
+                                682 		.size		init_peripherals,.-init_peripherals
+                                683 	# Number of nodes = 102
+                                684 	
+                                685 	# Allocations for init_peripherals
+                                686 	#	not allocated	$$66
+                                687 	#	not allocated	$$67
+                                688 	#	not allocated	$$68
+                                689 	#	not allocated	$$69
+                                690 	#	not allocated	$$70
+                                691 	#	not allocated	$$71
+                                692 	#	not allocated	$$72
+                                693 	#	not allocated	$$73
+                                694 	#	not allocated	$$74
+                                695 	#	not allocated	$$75
+                                696 	#	not allocated	$$76
+                                697 	#	not allocated	$$77
+                                698 	#	not allocated	$$78
+                                699 	#	not allocated	$$79
+                                700 	#	not allocated	$$80
+                                701 	#	not allocated	$$81
+                                702 	#	not allocated	$$82
+                                703 	#	not allocated	$$83
+                                704 	#	not allocated	$$84
+                                705 	#	not allocated	$$85
+                                706 	#	not allocated	$$86
+                                707 	#	not allocated	$$87
+                                708 	#	not allocated	$$88
+                                709 	#	not allocated	$$89
+                                710 	#	not allocated	$$90
+                                711 	#	not allocated	$$91
+                                712 	#	not allocated	$$92
+                                713 	#	not allocated	$$93
+                                714 	#	not allocated	$$94
+                                715 	#	not allocated	$$95
+                                716 	#	not allocated	$$96
+                                717 	#	not allocated	$$97
+                                718 	#	not allocated	$$98
+                                719 	#	not allocated	$$99
+                                720 	#	r3		$$100
+                                721 	#	r3		$$101
+                                722 	#	not allocated	$$102
+                                723 	#	r3		$$103
+                                724 	#	r3		$$104
+                                725 	#	r3		$$105
+                                726 	#	r3		$$106
+                                727 	
+                                728 	#$$bf
+                                729 		.align		2
+                                730 		.globl		init
+  0000005c 02  0000 0014 0000   731 		.d2_cfa_start __local_cie
+  00000062 02  0000 0000 0000       	
+  00000068 02  0000 0142            	
+                                732 	init:
+                                733 		.section	.debug_info,,n
+                                734 	.L5815:
+  00000136 05  02               735 		.sleb128	2
+  00000137 05  0000 0150        736 		.4byte		.L5812-.L2
+  0000013b 05  696e 6974        737 		.byte		"init"
+  0000013f 05  00               738 		.byte		0
+  00000140 05  0000 0001        739 		.4byte		.L5791
+  00000144 05  07               740 		.uleb128	7
+  00000145 05  01               741 		.byte		0x1
+  00000146 05  01               742 		.byte		0x1
+  00000147 05  0000 0000        743 		.4byte		.L5813
+  0000014b 05  0000 0000        744 		.4byte		.L5814
+                                745 		.section	.text_vle,,c
+  000000d5 03  03d6 7e22        746 	        .d2line         8
+                                747 	.L5813:
+  00000214 00  1821 06f0        748 		e_stwu		r1,-16(r1)
+  0000006c 02  410e 10          749 		.d2_cfa_def_cfa_offset	16
+  00000218 00  0080             750 		se_mflr		r0,lr
+  0000021a 00  d501             751 		se_stw		r0,20(r1)
+  0000006f 02  4111 6c7f        752 		.d2_cfa_offset    108,-1
+                                753 	#$$ee
+  000000d9 03  0204 0a          754 		.d2prologue_end
+  0000021c 00  707f e7f3        755 		e_lis		r3,65523
+  00000220 00  7070 c010        756 		e_or2i		r3,32784
+  000000dc 03  20               757 	        .d2line         10
+  00000224 00  c063             758 		se_lwz		r6,0(r3)
+                                759 	#$$vo
+  00000226 00  74c6 001f        760 		e_rlwinm		r6,r6,0,0,15
+  0000022a 00  70d8 c520        761 		e_or2i		r6,50464
+  0000022e 00  d063             762 		se_stw		r6,0(r3)
+                                763 	#$$vo
+  000000dd 03  27               764 	        .d2line         11
+  00000230 00  c073             765 		se_lwz		r7,0(r3)
+                                766 	#$$vo
+  00000232 00  74e7 001f        767 		e_rlwinm		r7,r7,0,0,15
+  00000236 00  70fb c128        768 		e_or2i		r7,55592
+  0000023a 00  d073             769 		se_stw		r7,0(r3)
+                                770 	#$$vo
+  000000de 03  28               771 	        .d2line         13
+  0000023c 00  70df e7f4        772 		e_lis		r6,-12
+  00000240 00  6207             773 		se_geni		r7,0
+  00000242 00  70e0 c10a        774 		e_or2i		r7,266
+  00000246 00  54e6 8000        775 		e_stw		r7,-32768(r6)
+                                776 	#$$vo
+  000000df 03  2c               777 	        .d2line         15
+                                778 	#$$fn 0xc8 0 0 0x0
+                                779 	#$$tl 0x0 0x0 0x0
+                                780 	#$$rs 0
+  0000024a 00  79ff fdb7        781 		bl		init_mode
+  0000024e 00  707f e7f4 7070   782 		e_lis		r3,-12	; e_or2i	r3,r3,32768
+  00000254 00  c000                 	
+  000000e0 03  0303 26          783 	        .d2line         18
+  00000256 00  c073             784 		se_lwz		r7,0(r3)
+                                785 	#$$vo
+  00000258 00  61a7             786 		se_bclri		r7,26
+  0000025a 00  d073             787 		se_stw		r7,0(r3)
+                                788 	#$$vo
+  000000e3 03  1c               789 	        .d2line         20
+  0000025c 00  c063             790 		se_lwz		r6,0(r3)
+                                791 	#$$vo
+  0000025e 00  61f6             792 		se_bclri		r6,31
+  00000260 00  d063             793 		se_stw		r6,0(r3)
+                                794 	#$$vo
+  00000262 00  707f e7f4        795 		e_lis		r3,65524
+  00000266 00  7070 c010        796 		e_or2i		r3,32784
+  000000e4 03  2c               797 	        .d2line         22
+  0000026a 00  c063             798 		se_lwz		r6,0(r3)
+                                799 	#$$vo
+  0000026c 00  74c6 057f        800 		e_rlwinm		r6,r6,0,21,31
+  00000270 00  18c6 d309        801 		e_ori		r6,r6,150994944
+  00000274 00  d063             802 		se_stw		r6,0(r3)
+                                803 	#$$vo
+  00000276 00  707f e7f4        804 		e_lis		r3,65524
+  0000027a 00  7070 c07b        805 		e_or2i		r3,32891
+  000000e5 03  0303 36          806 	        .d2line         25
+  0000027e 00  8063             807 		se_lbz		r6,0(r3)
+                                808 	#$$vo
+  00000280 00  74c6 0637        809 		e_rlwinm		r6,r6,0,24,27
+  00000284 00  18c6 d006        810 		e_ori		r6,r6,6
+  00000288 00  9063             811 		se_stb		r6,0(r3)
+                                812 	#$$vo
+  0000028a 00  707f e7f4        813 		e_lis		r3,65524
+  0000028e 00  7070 c07c        814 		e_or2i		r3,32892
+  000000e8 03  37               815 	        .d2line         26
+  00000292 00  8063             816 		se_lbz		r6,0(r3)
+                                817 	#$$vo
+  00000294 00  74c6 0637        818 		e_rlwinm		r6,r6,0,24,27
+  00000298 00  18c6 d005        819 		e_ori		r6,r6,5
+  0000029c 00  9063             820 		se_stb		r6,0(r3)
+                                821 	#$$vo
+  0000029e 00  707f e7f4        822 		e_lis		r3,65524
+  000002a2 00  7070 c086        823 		e_or2i		r3,32902
+  000000e9 03  37               824 	        .d2line         27
+  000002a6 00  8063             825 		se_lbz		r6,0(r3)
+                                826 	#$$vo
+  000002a8 00  18c6 d00f        827 		e_ori		r6,r6,15
+  000002ac 00  9063             828 		se_stb		r6,0(r3)
+                                829 	#$$vo
+  000002ae 00  707f e7f4        830 		e_lis		r3,65524
+  000002b2 00  7070 c087        831 		e_or2i		r3,32903
+  000000ea 03  2f               832 	        .d2line         28
+  000002b6 00  8063             833 		se_lbz		r6,0(r3)
+                                834 	#$$vo
+  000002b8 00  74c6 0637        835 		e_rlwinm		r6,r6,0,24,27
+  000002bc 00  18c6 d008        836 		e_ori		r6,r6,8
+  000002c0 00  9063             837 		se_stb		r6,0(r3)
+                                838 	#$$vo
+  000002c2 00  707f e7f4        839 		e_lis		r3,65524
+  000002c6 00  7070 c082        840 		e_or2i		r3,32898
+  000000eb 03  37               841 	        .d2line         29
+  000002ca 00  8063             842 		se_lbz		r6,0(r3)
+                                843 	#$$vo
+  000002cc 00  74c6 0637        844 		e_rlwinm		r6,r6,0,24,27
+  000002d0 00  18c6 d00d        845 		e_ori		r6,r6,13
+  000002d4 00  9063             846 		se_stb		r6,0(r3)
+                                847 	#$$vo
+  000002d6 00  707f e7f4        848 		e_lis		r3,65524
+  000002da 00  7070 c083        849 		e_or2i		r3,32899
+  000000ec 03  37               850 	        .d2line         30
+  000002de 00  8063             851 		se_lbz		r6,0(r3)
+                                852 	#$$vo
+  000002e0 00  74c6 0637        853 		e_rlwinm		r6,r6,0,24,27
+  000002e4 00  18c6 d009        854 		e_ori		r6,r6,9
+  000002e8 00  9063             855 		se_stb		r6,0(r3)
+                                856 	#$$vo
+  000002ea 00  707f e7f4        857 		e_lis		r3,65524
+  000002ee 00  7070 c084        858 		e_or2i		r3,32900
+  000000ed 03  37               859 	        .d2line         31
+  000002f2 00  8063             860 		se_lbz		r6,0(r3)
+                                861 	#$$vo
+  000002f4 00  74c6 0637        862 		e_rlwinm		r6,r6,0,24,27
+  000002f8 00  18c6 d00a        863 		e_ori		r6,r6,10
+  000002fc 00  9063             864 		se_stb		r6,0(r3)
+                                865 	#$$vo
+  000002fe 00  707f e7f4        866 		e_lis		r3,65524
+  00000302 00  7070 c085        867 		e_or2i		r3,32901
+  000000ee 03  37               868 	        .d2line         32
+  00000306 00  8063             869 		se_lbz		r6,0(r3)
+                                870 	#$$vo
+  00000308 00  74c6 0637        871 		e_rlwinm		r6,r6,0,24,27
+  0000030c 00  18c6 d00e        872 		e_ori		r6,r6,14
+  00000310 00  9063             873 		se_stb		r6,0(r3)
+                                874 	#$$vo
+  00000312 00  707f e7f4        875 		e_lis		r3,65524
+  00000316 00  7070 c079        876 		e_or2i		r3,32889
+  000000ef 03  37               877 	        .d2line         33
+  0000031a 00  8063             878 		se_lbz		r6,0(r3)
+                                879 	#$$vo
+  0000031c 00  74c6 0637        880 		e_rlwinm		r6,r6,0,24,27
+  00000320 00  18c6 d007        881 		e_ori		r6,r6,7
+  00000324 00  9063             882 		se_stb		r6,0(r3)
+                                883 	#$$vo
+  00000326 00  707f e7f4        884 		e_lis		r3,65524
+  0000032a 00  7070 c0bf        885 		e_or2i		r3,32959
+  000000f0 03  37               886 	        .d2line         34
+  0000032e 00  8063             887 		se_lbz		r6,0(r3)
+                                888 	#$$vo
+  00000330 00  74c6 0637        889 		e_rlwinm		r6,r6,0,24,27
+  00000334 00  18c6 d007        890 		e_ori		r6,r6,7
+  00000338 00  9063             891 		se_stb		r6,0(r3)
+                                892 	#$$vo
+  000000f1 03  0309 26          893 	        .d2line         43
+                                894 	#$$fn 0x1ff8 0 0 0x1
+                                895 	#$$tl 0x0 0x0 0x0
+                                896 	#$$rs 0
+  0000033a 00  79ff fe0f        897 		bl		init_peripherals
+  0000033e 00  707f e7e0        898 		e_lis		r3,65504
+  000000f4 03  1f               899 	        .d2line         44
+  00000342 00  c063             900 		se_lwz		r6,0(r3)
+                                901 	#$$vo
+  00000344 00  18c6 d301        902 		e_ori		r6,r6,16777216
+  00000348 00  d063             903 		se_stw		r6,0(r3)
+                                904 	#$$vo
+  000000f5 03  1f               905 	        .d2line         45
+                                906 	#$$fn 0xc8 0 0 0x0
+                                907 	#$$tl 0x0 0x0 0x0
+                                908 	#$$rs 0
+  0000034a 00  79ff fdaf        909 		bl		init_timer
+  000000f6 03  0309 16          910 	        .d2line         54
+                                911 	#$$be
+  000000f9 03  0200 0b01        912 		.d2epilogue_begin
+  0000034e 00  c501             913 		se_lwz		r0,20(r1)
+  00000350 00  0090             914 		se_mtlr		r0
+  00000352 00  20f1             915 		se_addi		r1,16
+                                916 	#$$tl 0x0 0x0 0x0
+  00000354 00  0004             917 		se_blr
+                                918 	#$$ef
+                                919 		.d2_cfa_end 2
+                                920 		.section	.debug_info,,n
+  0000014f 05  00               921 		.sleb128	0
+                                922 	.L5812:
+                                923 		.section	.text_vle,,c
+                                924 	.L5814:
+                                925 		.type		init,@function
+                                926 		.size		init,.-init
+                                927 	# Number of nodes = 90
+                                928 	
+                                929 	# Allocations for init
+                                930 	#	not allocated	$$107
+                                931 	#	not allocated	$$108
+                                932 	#	not allocated	$$109
+                                933 	#	not allocated	$$110
+                                934 	#	not allocated	$$111
+                                935 	#	not allocated	$$112
+                                936 	#	not allocated	$$113
+                                937 	#	not allocated	$$114
+                                938 	#	not allocated	$$115
+                                939 	#	not allocated	$$116
+                                940 	#	not allocated	$$117
+                                941 	#	not allocated	$$118
+                                942 	#	not allocated	$$119
+                                943 	#	not allocated	$$120
+                                944 	#	not allocated	$$121
+                                945 	#	not allocated	$$122
+                                946 	#	not allocated	$$123
+                                947 	#	not allocated	$$124
+                                948 	#	not allocated	$$125
+                                949 	#	not allocated	$$126
+                                950 	#	not allocated	$$127
+                                951 	#	not allocated	$$128
+                                952 	#	not allocated	$$129
+                                953 	#	not allocated	$$130
+                                954 	#	not allocated	$$131
+                                955 	#	not allocated	$$132
+                                956 	#	not allocated	$$133
+                                957 	#	not allocated	$$134
+                                958 	#	not allocated	$$135
+                                959 	#	not allocated	$$136
+                                960 	#	not allocated	$$137
+                                961 	#	not allocated	$$138
+                                962 	#	not allocated	$$139
+                                963 	#	r3		$$140
+                                964 	#	not allocated	$$141
+                                965 	#	r3		$$142
+                                966 	#	not allocated	$$143
+                                967 	#	r3		$$144
+                                968 	#	r3		$$145
+                                969 	#	r3		$$146
+                                970 	#	r3		$$147
+                                971 	#	r3		$$148
+                                972 	#	r3		$$149
+                                973 	#	r3		$$150
+                                974 	#	r3		$$151
+                                975 	#	r3		$$152
+                                976 	#	r3		$$153
+                                977 	#	r3		$$154
+                                978 	#	r3		$$155
+                                979 		.section	.abs.00000040,,c
+                                980 	
+                                981 	#$$bf
+                                982 		.align		2
+                                983 		.globl		Ext_Isr
+  00000074 02  0000 002c 0000   984 		.d2_cfa_start __local_cie
+  0000007a 02  0000 0000 0000       	
+  00000080 02  0000 00dc            	
+                                985 	Ext_Isr:
+                                986 		.section	.debug_line.abs.00000040,,n
+                                987 		.sectionlink	.debug_line
+                                988 	.L5824:
+                                989 		.section	.abs.00000040,,c
+                                990 	.L5820:
+  00000000 07                   991 		.0byte		.L5818
+  00000000 09  0000 0081 0002   992 		.d2_line_start	.debug_line.abs.00000040
+  00000006 09  0000 0013 0201       	
+  0000000c 09  ff04 0d00 0101       	
+  00000012 09  0101 0000 0001       	
+  00000018 09  0000 0100 00         	
+                                993 		.section	.debug_info.abs.00000040,,n
+                                994 		.sectionlink	.debug_info
+                                995 	.L5818:
+  00000000 0a  0000 00a6        996 		.4byte		.L5819-.L5817
+                                997 	.L5817:
+  00000004 0a  0002             998 		.2byte		0x2
+  00000006 0a  0000 0000        999 		.4byte		.L9
+  0000000a 0a  04              1000 		.byte		0x4
+  0000000b 0a  01              1001 		.sleb128	1
+  0000000c 0a  0000 00a9       1002 		.4byte		.L5823-.L5818
+  00000010 0a  433a 5c55 7365  1003 		.byte		"C:\\Users\\kucha\\Downloads\\Unit1\\src\\api.c"
+  00000016 0a  7273 5c6b 7563       	
+  0000001c 0a  6861 5c44 6f77       	
+  00000022 0a  6e6c 6f61 6473       	
+  00000028 0a  5c55 6e69 7431       	
+  0000002e 0a  5c73                 	
+  00000038 0a  00              1004 		.byte		0
+  00000039 0a  4469 6162 2044  1005 		.byte		"Diab Data, Inc:dcc Rel 5.7.0.0:PPC5534"
+  0000003f 0a  6174 612c 2049       	
+  00000045 0a  6e63 3a64 6363       	
+  0000004b 0a  2052 656c 2035       	
+  00000051 0a  2e37 2e30 2e30       	
+  00000057 0a  3a50                 	
+  0000005f 0a  00              1006 		.byte		0
+  00000060 0a  433a 5c55 7365  1007 		.byte		"C:\\Users\\kucha\\Downloads\\Unit1"
+  00000066 0a  7273 5c6b 7563       	
+  0000006c 0a  6861 5c44 6f77       	
+  00000072 0a  6e6c 6f61 6473       	
+  00000078 0a  5c55 6e69 7431       	
+  0000007e 0a  00              1008 		.byte		0
+  0000007f 0a  01              1009 		.uleb128	1
+  00000080 0a  0000 0000       1010 		.4byte		.L5820
+  00000084 0a  0000 0000       1011 		.4byte		.L5821
+  00000088 0a  0000 0000       1012 		.4byte		.L5824
+                               1013 		.section	.debug_abbrev,,n
+  00000039 04  04              1014 		.uleb128	4
+  0000003a 04  2e              1015 		.uleb128	46
+  0000003b 04  01              1016 		.byte		0x1
+  0000003c 04  01              1017 		.uleb128	1
+  0000003d 04  13              1018 		.uleb128	19
+  0000003e 04  03              1019 		.uleb128	3
+  0000003f 04  08              1020 		.uleb128	8
+  00000040 04  3a              1021 		.uleb128	58
+  00000041 04  06              1022 		.uleb128	6
+  00000042 04  3b              1023 		.uleb128	59
+  00000043 04  0f              1024 		.uleb128	15
+  00000044 04  3f              1025 		.uleb128	63
+  00000045 04  0c              1026 		.uleb128	12
+  00000046 04  11              1027 		.uleb128	17
+  00000047 04  01              1028 		.uleb128	1
+  00000048 04  12              1029 		.uleb128	18
+  00000049 04  01              1030 		.uleb128	1
+  0000004a 04  00              1031 		.uleb128	0
+  0000004b 04  00              1032 		.uleb128	0
+                               1033 		.section	.debug_info.abs.00000040,,n
+                               1034 		.sectionlink	.debug_info
+                               1035 	.L5830:
+  0000008c 0a  04              1036 		.sleb128	4
+  0000008d 0a  0000 00a9       1037 		.4byte		.L5826-.L5818
+  00000091 0a  4578 745f 4973  1038 		.byte		"Ext_Isr"
+  00000097 0a  72                   	
+  00000098 0a  00              1039 		.byte		0
+  00000099 0a  0000 0001       1040 		.4byte		.L5829
+  0000009d 0a  be01            1041 		.uleb128	190
+  0000009f 0a  01              1042 		.byte		0x1
+  000000a0 0a  0000 0000       1043 		.4byte		.L5827
+  000000a4 0a  0000 0000       1044 		.4byte		.L5828
+                               1045 		.section	.abs.00000040,,c
+  0000001d 09  0033 0343 3a5c  1046 		.d2file		"C:\\Users\\kucha\\Downloads\\Unit1\\src\\api.c"
+  00000023 09  5c55 7365 7273       	
+  00000029 09  5c5c 6b75 6368       	
+  0000002f 09  615c 5c44 6f77       	
+  00000035 09  6e6c 6f61 6473       	
+  0000003b 09  5c5c                 	
+  00000054 09  0005 0200 0000  1047 	        .d2line         191
+  0000005a 09  0003 be01 0e         	
+                               1048 	.L5827:
+  00000000 07  1821 06b0       1049 		e_stwu		r1,-80(r1)
+  00000084 02  410e 50         1050 		.d2_cfa_def_cfa_offset	80
+  00000004 07  d201            1051 		se_stw		r0,8(r1)
+  00000006 07  7c1a 02a6       1052 		mfspr		r0,srr0
+  0000000a 07  d301            1053 		se_stw		r0,12(r1)
+  0000000c 07  7c1b 02a6       1054 		mfspr		r0,srr1
+  00000010 07  d401            1055 		se_stw		r0,16(r1)
+  00000012 07  00a0            1056 		se_mfctr		r0,ctr
+  00000014 07  d501            1057 		se_stw		r0,20(r1)
+  00000016 07  7c01 02a6       1058 		mfspr		r0,xer
+  0000001a 07  d601            1059 		se_stw		r0,24(r1)
+  0000001c 07  7c00 0026       1060 		mfcr		r0
+  00000020 07  d701            1061 		se_stw		r0,28(r1)
+  00000022 07  0080            1062 		se_mflr		r0,lr
+  00000024 07  d801            1063 		se_stw		r0,32(r1)
+                               1064 	#$$br
+  00000026 07  da31            1065 		se_stw		r3,40(r1)
+  00000087 02  4983 0a         1066 		.d2_cfa_offset	3,10
+  00000028 07  db41            1067 		se_stw		r4,44(r1)
+  0000008a 02  8409            1068 		.d2_cfa_offset	4,9
+  0000002a 07  dc51            1069 		se_stw		r5,48(r1)
+  0000008c 02  8508            1070 		.d2_cfa_offset	5,8
+  0000002c 07  dd61            1071 		se_stw		r6,52(r1)
+  0000008e 02  8607            1072 		.d2_cfa_offset	6,7
+  0000002e 07  de71            1073 		se_stw		r7,56(r1)
+  00000090 02  8706            1074 		.d2_cfa_offset	7,6
+  00000030 07  5501 003c       1075 		e_stw		r8,60(r1)
+  00000092 02  4188 05         1076 		.d2_cfa_offset	8,5
+  00000034 07  5521 0040       1077 		e_stw		r9,64(r1)
+  00000095 02  4189 04         1078 		.d2_cfa_offset	9,4
+  00000038 07  5541 0044       1079 		e_stw		r10,68(r1)
+  00000098 02  418a 03         1080 		.d2_cfa_offset	10,3
+  0000003c 07  5561 0048       1081 		e_stw		r11,72(r1)
+  0000009b 02  418b 02         1082 		.d2_cfa_offset	11,2
+  00000040 07  5581 004c       1083 		e_stw		r12,76(r1)
+  0000009e 02  418c 01         1084 		.d2_cfa_offset	12,1
+                               1085 	#$$er
+                               1086 	#$$ee
+  0000005f 09  0222 0a         1087 		.d2prologue_end
+  00000062 09  10              1088 	        .d2line         193
+  00000044 07  70ff e7f5       1089 		e_lis		r7,-11
+  00000048 07  50e7 8010       1090 		e_lwz		r7,-32752(r7)
+                               1091 	#$$vo
+  0000004c 07  74eb f5ff       1092 		e_rlwinm		r11,r7,30,23,31
+  00000050 07  180b a83b       1093 		cmpi		0,0,r11,59
+  00000054 07  e60b            1094 		bc		1,2,.L5783
+  00000056 07  180b a83c       1095 		cmpi		0,0,r11,60
+  0000005a 07  e60f            1096 		bc		1,2,.L5784
+  0000005c 07  180b a83d       1097 		cmpi		0,0,r11,61
+  00000060 07  e617            1098 		bc		1,2,.L5785
+  00000062 07  180b a87f       1099 		cmpi		0,0,r11,127
+  00000066 07  e61d            1100 		bc		1,2,.L5786
+  00000068 07  e824            1101 		b		.L5782
+                               1102 	.L5783:
+  00000063 09  0303 5a         1103 	        .d2line         196
+                               1104 	#$$fn 0x1ff8 0 0 0x1
+                               1105 	#$$tl 0x0 0x0 0x0
+                               1106 	#$$rs 0
+  0000006a 07  7800 0001       1107 		bl		timer0_intr
+  00000066 09  17              1108 	        .d2line         197
+  0000006e 07  7078 e3ff       1109 		e_lis		r3,50175
+  00000072 07  7060 c10c       1110 		e_or2i		r3,268
+  00000067 09  1f              1111 	        .d2line         198
+  00000076 07  e819            1112 		b		.L5816
+                               1113 	.L5784:
+  00000068 09  13              1114 	        .d2line         199
+  00000069 09  0f              1115 	        .d2line         200
+                               1116 	#$$fn 0x1ff8 0 0 0x1
+                               1117 	#$$tl 0x0 0x0 0x0
+                               1118 	#$$rs 0
+  00000078 07  7800 0001       1119 		bl		timer1_intr
+  0000007c 07  7078 e3ff       1120 		e_lis		r3,50175
+  00000080 07  7060 c11c       1121 		e_or2i		r3,284
+  0000006a 09  27              1122 	        .d2line         201
+  00000084 07  c063            1123 		se_lwz		r6,0(r3)
+                               1124 	#$$vo
+  00000086 07  18c6 d001       1125 		e_ori		r6,r6,1
+  0000008a 07  d063            1126 		se_stw		r6,0(r3)
+                               1127 	#$$vo
+  0000006b 09  1f              1128 	        .d2line         202
+  0000008c 07  e812            1129 		b		.L5782
+                               1130 	.L5785:
+  0000006c 09  14              1131 	        .d2line         204
+  0000008e 07  7078 e3ff       1132 		e_lis		r3,50175
+  00000092 07  7060 c12c       1133 		e_or2i		r3,300
+  0000006d 09  1f              1134 	        .d2line         205
+  00000096 07  c063            1135 		se_lwz		r6,0(r3)
+                               1136 	#$$vo
+  00000098 07  18c6 d001       1137 		e_ori		r6,r6,1
+  0000009c 07  d063            1138 		se_stw		r6,0(r3)
+                               1139 	#$$vo
+  0000006e 09  1f              1140 	        .d2line         206
+  0000009e 07  e809            1141 		b		.L5782
+                               1142 	.L5786:
+  0000006f 09  13              1143 	        .d2line         207
+  00000070 09  0f              1144 	        .d2line         208
+  000000a0 07  7078 e3ff       1145 		e_lis		r3,50175
+  000000a4 07  7060 c13c       1146 		e_or2i		r3,316
+                               1147 	.L5816:
+  000000a8 07  c073            1148 		se_lwz		r7,0(r3)
+                               1149 	#$$vo
+  000000aa 07  18e7 d001       1150 		e_ori		r7,r7,1
+  000000ae 07  d073            1151 		se_stw		r7,0(r3)
+                               1152 	#$$vo
+                               1153 	.L5782:
+  00000071 09  0303 2e         1154 	        .d2line         211
+  000000b0 07  70ff e7f5       1155 		e_lis		r7,-11
+  000000b4 07  4806            1156 		se_li		r6,0
+  000000b6 07  54c7 8018       1157 		e_stw		r6,-32744(r7)
+                               1158 	#$$vo
+  00000074 09  0303 22         1159 	        .d2line         214
+                               1160 	#$$be
+  00000077 09  0200 0b01       1161 		.d2epilogue_begin
+                               1162 	#$$br
+                               1163 	#$$er
+  000000ba 07  c801            1164 		se_lwz		r0,32(r1)
+  000000bc 07  0090            1165 		se_mtlr		r0
+  000000be 07  c701            1166 		se_lwz		r0,28(r1)
+  000000c0 07  7c0f f120       1167 		mtcrf		255,r0
+  000000c4 07  c601            1168 		se_lwz		r0,24(r1)
+  000000c6 07  7c01 03a6       1169 		mtspr		xer,r0
+  000000ca 07  c401            1170 		se_lwz		r0,16(r1)
+  000000cc 07  7c1b 03a6       1171 		mtspr		srr1,r0
+  000000d0 07  c301            1172 		se_lwz		r0,12(r1)
+  000000d2 07  7c1a 03a6       1173 		mtspr		srr0,r0
+  000000d6 07  1821 8050       1174 		e_addi		r1,r1,80
+                               1175 	#$$tl 0x0 0x0 0x0
+  000000da 07  0008            1176 		se_rfi
+                               1177 	#$$ef
+                               1178 		.d2_cfa_end 2
+                               1179 		.section	.debug_info.abs.00000040,,n
+                               1180 		.sectionlink	.debug_info
+  000000a8 0a  00              1181 		.sleb128	0
+                               1182 	.L5826:
+                               1183 		.section	.abs.00000040,,c
+                               1184 	.L5828:
+                               1185 		.type		Ext_Isr,@function
+                               1186 		.size		Ext_Isr,.-Ext_Isr
+                               1187 	# Number of nodes = 36
+                               1188 	
+                               1189 	# Allocations for Ext_Isr
+                               1190 	#	not allocated	$$156
+                               1191 	#	not allocated	$$157
+                               1192 	#	not allocated	$$158
+                               1193 	#	not allocated	$$159
+                               1194 	#	not allocated	$$160
+                               1195 	#	not allocated	$$161
+                               1196 	#	r3		$$165
+                               1197 	#	not allocated	$$166
+                               1198 	#	r3		$$167
+                               1199 	#	r3		$$168
+                               1200 	
+                               1201 	# Allocations for module
+                               1202 		.section	.debug_abbrev,,n
+  0000004c 04  05              1203 		.uleb128	5
+  0000004d 04  34              1204 		.uleb128	52
+  0000004e 04  00              1205 		.byte		0x0
+  0000004f 04  3f              1206 		.uleb128	63
+  00000050 04  0c              1207 		.uleb128	12
+  00000051 04  3a              1208 		.uleb128	58
+  00000052 04  06              1209 		.uleb128	6
+  00000053 04  3b              1210 		.uleb128	59
+  00000054 04  0f              1211 		.uleb128	15
+  00000055 04  03              1212 		.uleb128	3
+  00000056 04  08              1213 		.uleb128	8
+  00000057 04  49              1214 		.uleb128	73
+  00000058 04  10              1215 		.uleb128	16
+  00000059 04  02              1216 		.uleb128	2
+  0000005a 04  09              1217 		.uleb128	9
+  0000005b 04  00              1218 		.uleb128	0
+  0000005c 04  00              1219 		.uleb128	0
+                               1220 		.section	.debug_info,,n
+                               1221 	.L5831:
+  00000150 05  05              1222 		.sleb128	5
+  00000151 05  01              1223 		.byte		0x1
+  00000152 05  0000 0001       1224 		.4byte		.L5791
+  00000156 05  05              1225 		.uleb128	5
+  00000157 05  636f 756e 7465  1226 		.byte		"counter"
+  0000015d 05  72                   	
+  0000015e 05  00              1227 		.byte		0
+  0000015f 05  0000 0000       1228 		.4byte		.L5804
+  00000163 05  05              1229 		.sleb128	5
+  00000164 05  03              1230 		.byte		0x3
+  00000165 05  0000 0000       1231 		.4byte		counter
+                               1232 		.sbss
+                               1233 		.type		counter,@object
+                               1234 		.size		counter,4
+                               1235 		.align		2
+                               1236 		.globl		counter
+                               1237 	counter:
+                               1238 		.space		4
+                               1239 		.section	.debug_abbrev,,n
+  0000005d 04  06              1240 		.uleb128	6
+  0000005e 04  24              1241 		.uleb128	36
+  0000005f 04  00              1242 		.byte		0x0
+  00000060 04  03              1243 		.uleb128	3
+  00000061 04  08              1244 		.uleb128	8
+  00000062 04  3e              1245 		.uleb128	62
+  00000063 04  0b              1246 		.uleb128	11
+  00000064 04  0b              1247 		.uleb128	11
+  00000065 04  0b              1248 		.uleb128	11
+  00000066 04  00              1249 		.uleb128	0
+  00000067 04  00              1250 		.uleb128	0
+                               1251 		.section	.debug_info,,n
+                               1252 	.L5804:
+  00000169 05  06              1253 		.sleb128	6
+  0000016a 05  696e 74         1254 		.byte		"int"
+  0000016d 05  00              1255 		.byte		0
+  0000016e 05  05              1256 		.byte		0x5
+  0000016f 05  04              1257 		.byte		0x4
+                               1258 	.L7:
+  00000170 05  00              1259 		.sleb128	0
+                               1260 	.L3:
+                               1261 		.section	.text_vle,,c
+                               1262 	.L5:
+                               1263 	.L5791: 	.d2filenum "C:\\Users\\kucha\\Downloads\\Unit1\\src\\api.c"
+  000000fd 03  0005 0200 0000  1264 		.d2_line_end
+  00000103 03  0000 0101            	
+                               1265 		.section	.debug_info.abs.00000040,,n
+                               1266 		.sectionlink	.debug_info
+                               1267 	.L5823:
+  000000a9 0a  00              1268 		.sleb128	0
+                               1269 	.L5819:
+                               1270 		.section	.abs.00000040,,c
+                               1271 	.L5821:
+                               1272 	.L5829: 	.d2filenum "C:\\Users\\kucha\\Downloads\\Unit1\\src\\api.c"
+  0000007b 09  0005 0200 0000  1273 		.d2_line_end
+  00000081 09  0000 0101            	
+                               1274 		.section	.debug_abbrev,,n
+  00000068 04  00              1275 		.sleb128	0
+

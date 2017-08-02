@@ -1,0 +1,25 @@
+
+<ApplicationDebug Header="unit1.s19" Extern=".\unit1.s19.rapp" Path=".\unit1.s19.rapp" AsyncBuild="" OutputFile="" sate="2" >
+	<Options>
+		<Config Header="Standard" >
+			<Set Header="ApplicationDebug" >
+				<Section Header="General" >
+					<Property Header="TargetFamily" Value="PPC" />
+							
+				</Section>
+					
+			</Set>
+			<Set Header="Target" >
+				<Section Header="ProcessorPPC" >
+					<Property Header="Processor" Value="SPC560P50_VLE" />
+							
+				</Section>
+				<Section Header="ToolSetPPC" >
+					<Property Header="BuildToolSetPPC" Value="GENERIC\GENERIC.config" />
+							
+				</Section>
+					
+			</Set>
+		</Config>
+	</Options>
+</ApplicationDebug>

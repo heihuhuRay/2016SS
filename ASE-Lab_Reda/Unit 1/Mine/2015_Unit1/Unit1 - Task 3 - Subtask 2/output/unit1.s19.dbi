@@ -1,0 +1,15 @@
+[Application]
+SrcDirectories=
+DebugTool=RLink_PPC
+Format=s19
+CodeOffset=0x0
+LoaderTool=PPC
+Target=PPC
+ApplicationPath=C:\Users\venr\Downloads\2015_Unit1\Unit1 - Task 3 - Subtask 2\output\unit1.s19
+[Device]
+Name=SPC560P50_VLE
+[Debug]
+ToolName=RLink_PPC
+Explore=No
+Startup=1
+StartupSymb=main
